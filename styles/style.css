@@ -732,4 +732,79 @@
     width: 15rem;
     margin: 4rem auto;
   }
+
+  #newsletter {
+    width: 100vw;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 255, 0.4)), to(rgba(0, 0, 255, 0.4))), url(../assets/images/perfumaria-1.jpg) no-repeat;
+    background: linear-gradient(rgba(0, 0, 255, 0.4), rgba(0, 0, 255, 0.4)), url(../assets/images/perfumaria-1.jpg) no-repeat;
+    background: cover;
+    background-size: center;
+    background-attachment: fixed;
+    padding: 6rem 0;
+    text-align: center;
+  }
+  
+  #newsletter h1 {
+    font-size: 6rem;
+    color: #fff;
+  }
+  
+  #newsletter p {
+    font-size: 3rem;
+    color: #fff;
+  }
+  
+  #newsletter input[type="text"] {
+    outline: none;
+    border: none;
+    background: #333;
+    color: #fff;
+    height: 4rem;
+    width: 34rem;
+    border-radius: 3rem;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+  }
+  
+  #newsletter input[type="text"]::-webkit-input-placeholder {
+    color: #ccc;
+  }
+  
+  #newsletter input[type="text"]:-ms-input-placeholder {
+    color: #ccc;
+  }
+  
+  #newsletter input[type="text"]::-ms-input-placeholder {
+    color: #ccc;
+  }
+  
+  #newsletter input[type="text"]::placeholder {
+    color: #ccc;
+  }
+  
+  #newsletter input[type="submit"] {
+    display: inline;
+    outline: none;
+    border: none;
+    height: 4rem;
+    width: 20rem;
+    background: #00008b;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: .5rem 0;
+    border-radius: 3rem;
+    text-transform: capitalize;
+    margin-top: 2rem;
+    background: red;
+  }
+  
+  #newsletter input[type="submit"]:hover {
+    background: #FF0000;
+    letter-spacing: .1rem;
+  }
+  
+  #newsletter input[type="submit"]:hover {
+    background: #00008b;
+  }
   
