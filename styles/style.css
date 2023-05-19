@@ -481,7 +481,7 @@
     top: 0;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
-    color: #FF0000;
+    color: green;
     font-size: 6rem;
     background: none;
     border: none;
@@ -497,7 +497,7 @@
   }
   
   #review .heading {
-    color: #00008b;
+    color: green;
     text-align: center;
     font-size: 3rem;
     padding-top: 5rem;
@@ -516,7 +516,7 @@
             transform: translateX(-50%);
     height: .3rem;
     width: 60%;
-    background: #FF0000;
+    background: green;
   }
   
   #review .heading::after {
@@ -577,14 +577,14 @@
   }
   
   #review .box-container .review-slider .box .comment p i {
-    color: red;
+    color: green;
     font-size: 1.6rem;
     padding: 2rem;
   }
   
   #review .box-container .review-slider .box .comment h3 {
     text-align: end;
-    color: #FF0000;
+    color: green;
   }
 
   #offer {
@@ -623,7 +623,7 @@
             transform: translateX(-50%);
     height: .3rem;
     width: 60%;
-    background: #FF0000;
+    background: green;
   }
   
   #offer .images {
@@ -654,14 +654,14 @@
   }
   
   #offer .images .box h3 {
-    color: #FF0000;
+    color: green;
     font-size: 2.5rem;
     margin: 1rem 0;
   }
   
   #offer .deal {
-    background: url(../assets/images/farmacia-1.jpg), -webkit-gradient(linear, left top, left bottom, from(red), to(red)) no-repeat;
-    background: url(../assets/images/farmacia-1.jpg), linear-gradient(red, red) no-repeat;
+    background: url(../assets/imagenes/farmacia-1.jpg), -webkit-gradient(linear, left top, left bottom, from(green), to(green)) no-repeat;
+    background: url(../assets/imagenes/farmacia-1.jpg), linear-gradient(green, green) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -686,7 +686,7 @@
   
   #offer .deal .content h4 {
     font-size: 4rem;
-    color: #00008b;
+    color: #44932e;
   }
   
   #offer .deal .content p {
@@ -709,7 +709,7 @@
     border: none;
     height: 4rem;
     width: 20rem;
-    background: #00008b;
+    background: #44932e;
     color: #fff;
     font-size: 1.5rem;
     cursor: pointer;
@@ -735,8 +735,8 @@
 
   #newsletter {
     width: 100vw;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 255, 0.4)), to(rgba(0, 0, 255, 0.4))), url(../assets/images/perfumaria-1.jpg) no-repeat;
-    background: linear-gradient(rgba(0, 0, 255, 0.4), rgba(0, 0, 255, 0.4)), url(../assets/images/perfumaria-1.jpg) no-repeat;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 255, 0.4)), to(rgba(0, 0, 255, 0.4))), url(../assets/imagenes/perfumaria-1.jpg) no-repeat;
+    background: linear-gradient(rgba(11, 130, 60, 0.4), rgba(11, 183, 57, 0.4)), url(../assets/imagenes/perfumaria-1.jpg) no-repeat;
     background: cover;
     background-size: center;
     background-attachment: fixed;
@@ -788,7 +788,7 @@
     border: none;
     height: 4rem;
     width: 20rem;
-    background: #00008b;
+    background: #44932e;
     color: #fff;
     font-size: 1.5rem;
     cursor: pointer;
@@ -805,7 +805,7 @@
   }
   
   #newsletter input[type="submit"]:hover {
-    background: #00008b;
+    background: #44932e;
   }
 
   #footer {
