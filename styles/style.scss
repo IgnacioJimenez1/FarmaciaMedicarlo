@@ -4,7 +4,7 @@
     border: none;
     height: 4rem;
     width: 20rem;
-    background: #00008b;
+    background: green;
     color: #fff;
     font-size: 1.5rem;
     cursor: pointer;
@@ -13,13 +13,13 @@
     text-transform: capitalize;
   
     &:hover{
-      background: #FF0000;
+      background: green;
       letter-spacing: .1rem;
     }
   }
   
   @mixin heading{
-    color: #00008b;
+    color: green;
     text-align: center;
     font-size: 3rem;
     padding-top: 5rem;
@@ -33,7 +33,7 @@
       transform: translateX(-50%);
       height: .3rem;
       width: 60%;
-      background: #FF0000;
+      background: green;
     }
   }
   
@@ -135,8 +135,8 @@
       ul{
         height: 100%;
         width: 35rem;
-        background: rgb(2,0,36);
-        background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,0.846325167037862) 22%, rgba(0,212,255,1) 92%);
+        background: rgb(1, 33, 8);
+        background: radial-gradient(circle, rgb(6, 77, 2) 0%, rgba(34, 208, 3, 0.846) 22%, rgb(90, 228, 147) 92%);
         display: flex;
         align-items: center;
         justify-content: center;
