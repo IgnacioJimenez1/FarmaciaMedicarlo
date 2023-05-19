@@ -148,3 +148,103 @@
     letter-spacing: .3rem;
     color: #fff;
   }
+
+  #home {
+    background: #0224fa;
+    background: radial-gradient(circle, rgba(2, 36, 250, 0.950018) 0%, rgba(12, 185, 240, 0.983631) 50%, #0b33c2 100%);
+  }
+  
+  #home .slide {
+    min-height: 100vh;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  
+  #home .slide .image img {
+    width: 50vw;
+  }
+  
+  #home .slide .content h1 {
+    font-size: 4rem;
+    color: #fff;
+  }
+  
+  #home .slide .content p {
+    font-size: 1.7rem;
+    color: #ccc;
+  }
+  
+  #home .slide .content .stars {
+    margin: 1rem;
+  }
+  
+  #home .slide .content .stars i {
+    font-size: 1.5rem;
+    padding-right: .5rem;
+    color: gold;
+  }
+  
+  #home .slide .content .price {
+    color: #FF0000;
+    font-size: 3.5rem;
+    margin: .5rem 0;
+  }
+  
+  #home .slide .content button {
+    outline: none;
+    border: none;
+    height: 4rem;
+    width: 20rem;
+    background: #00008b;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: .5rem 0;
+    border-radius: 3rem;
+    text-transform: capitalize;
+  }
+  
+  #home .slide .content button:hover {
+    background: #FF0000;
+    letter-spacing: .1rem;
+  }
+  
+  #home .owl-nav .owl-next, #home .owl-nav .owl-prev {
+    position: absolute;
+    top: 45%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    color: #FF0000;
+    font-size: 6rem;
+    background: none;
+    border: none;
+    outline: none;
+  }
+  
+  #home .owl-nav .owl-next {
+    right: 1rem;
+  }
+  
+  #home .owl-nav .owl-prev {
+    left: 1rem;
+  }
+  
+  #home .owl-dots {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
+  
+  #home .owl-dots .owl-dot {
+    border: none;
+    outline: none;
+  }
