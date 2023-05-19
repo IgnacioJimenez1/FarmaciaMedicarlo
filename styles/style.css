@@ -726,3 +726,10 @@
   #offer .deal .content button:hover {
     background: #FF0000;
   }
+
+  #brand .brand-slider img {
+    height: 10rem;
+    width: 15rem;
+    margin: 4rem auto;
+  }
+  
