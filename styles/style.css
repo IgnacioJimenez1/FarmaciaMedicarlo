@@ -451,3 +451,138 @@
             transform: scale(1);
   }
   
+  #review {
+    height: 90vh;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    background: url(../assets/images/farmacia.jpg), -webkit-gradient(linear, left top, left bottom, from(blue)) no-repeat;
+    background: url(../assets/images/farmacia.jpg), linear-gradient(blue) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: screen;
+    position: relative;
+  }
+  
+  #review .owl-nav .owl-next, #review .owl-nav .owl-prev {
+    position: absolute;
+    top: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    color: #FF0000;
+    font-size: 6rem;
+    background: none;
+    border: none;
+    outline: none;
+  }
+  
+  #review .owl-nav .owl-next {
+    right: 4rem;
+  }
+  
+  #review .owl-nav .owl-prev {
+    left: 4rem;
+  }
+  
+  #review .heading {
+    color: #00008b;
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 5rem;
+    margin: 2rem 0;
+    position: relative;
+    padding-top: 2rem;
+    color: red;
+  }
+  
+  #review .heading::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    height: .3rem;
+    width: 60%;
+    background: #FF0000;
+  }
+  
+  #review .heading::after {
+    background: #fff;
+  }
+  
+  #review .box-container {
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  #review .box-container .review-slider .box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  #review .box-container .review-slider .box .image {
+    margin-top: 10rem;
+    margin-left: 3rem;
+  }
+  
+  #review .box-container .review-slider .box .image img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50% 50% 50% 0%;
+    border: .5rem solid orangered;
+  }
+  
+  #review .box-container .review-slider .box .comment {
+    height: 20rem;
+    width: 45rem;
+    background: #fff;
+    border-radius: 2% 2% 0% 40%;
+    padding-top: 2rem;
+  }
+  
+  #review .box-container .review-slider .box .comment p {
+    color: #333;
+    font-size: 1.6rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  #review .box-container .review-slider .box .comment p i {
+    color: red;
+    font-size: 1.6rem;
+    padding: 2rem;
+  }
+  
+  #review .box-container .review-slider .box .comment h3 {
+    text-align: end;
+    color: #FF0000;
+  }
