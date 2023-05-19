@@ -807,4 +807,193 @@
   #newsletter input[type="submit"]:hover {
     background: #00008b;
   }
+
+  #footer {
+    padding: 2rem 0;
+    background: #333;
+    width: 100vw;
+  }
+  
+  #footer .row {
+    width: 100%;
+    margin: 0;
+  }
+  
+  #footer .brand-info {
+    margin: 1rem;
+    padding: 0;
+  }
+  
+  #footer .brand-info a {
+    color: #fff;
+    font-size: 2rem;
+  }
+  
+  #footer .brand-info a img {
+    width: 7rem;
+    border-radius: 5px;
+  }
+  
+  #footer .brand-info a:hover {
+    text-decoration: none;
+  }
+  
+  #footer .brand-info a i {
+    padding: 0 .5rem;
+    font-size: 2rem;
+  }
+  
+  #footer .brand-info a h3 {
+    display: inline;
+    font-size: 2rem;
+  }
+  
+  #footer .brand-info p {
+    color: #ccc;
+    padding: 2rem;
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  #footer .links {
+    padding: 0;
+    margin: 1rem;
+  }
+  
+  #footer .links h3 {
+    font-size: 2rem;
+    color: #fff;
+  }
+  
+  #footer .links .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  
+  #footer .links .nav-links a {
+    color: #ccc;
+    font-size: 1.5rem;
+  }
+  
+  #footer .links, #footer .follow-us {
+    padding: 0;
+    margin: 1rem;
+  }
+  
+  #footer .links h3, #footer .follow-us h3 {
+    font-size: 2rem;
+    color: #fff;
+  }
+  
+  #footer .links .follow-us-links, #footer .follow-us .follow-us-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  
+  #footer .links .follow-us-links a, #footer .follow-us .follow-us-links a {
+    color: #ccc;
+    font-size: 1.5rem;
+  }
+  
+  #footer .credit {
+    color: #fff;
+    font-size: 2rem;
+    padding-top: 1.5rem;
+    width: 100%;
+    border: 100%;
+    border: 0.1rem solid rgba(255, 255, 255, 0.5);
+  }
+  
+  #footer .credit span {
+    color: #FF0000;
+  }
+  
+  .fa-times {
+    -webkit-transform: translatex(27rem);
+            transform: translatex(27rem);
+    padding-top: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    html {
+      font-size: 55%;
+    }
+    #home {
+      padding-bottom: 4rem;
+    }
+    #home .owl-dots {
+      display: none;
+    }
+    #home .slide {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+          -ms-flex-flow: column-reverse;
+              flex-flow: column-reverse;
+    }
+    #home .slide .content {
+      padding: 1rem;
+    }
+    #home .slide .image img {
+      width: 100vw;
+    }
+    #product .product-container .title {
+      margin-left: 0;
+      text-align: center;
+    }
+    #offer .deal {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column;
+              flex-flow: column;
+    }
+    #offer .deal .image img {
+      height: auto;
+      width: 100%;
+    }
+    #offer .deal .content {
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    #review .heading {
+      padding-top: 15rem;
+    }
+    #review .box-container .review-slider .box {
+      position: relative;
+      height: 50vh;
+    }
+    #review .box-container .review-slider .box .image {
+      position: absolute;
+      top: 0;
+      margin: 0;
+    }
+    #review .box-container .review-slider .box .image img {
+      border-radius: 5rem;
+    }
+    #review .box-container .review-slider .box .comment {
+      border-radius: .8rem;
+      text-align: center;
+    }
+    #review .box-container .review-slider .box .comment h3 {
+      text-align: center;
+    }
+    #newsletter h1 {
+      font-size: 4rem;
+    }
+    #newsletter p {
+      font-size: 2rem;
+    }
+  }
+  /*# sourceMappingURL=style.css.map */
   
