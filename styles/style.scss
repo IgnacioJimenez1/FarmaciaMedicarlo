@@ -159,7 +159,7 @@
   
             &:hover{
               text-decoration: none;
-              background: #FF0000;
+              background: green;
               letter-spacing: .3rem;
               color: #fff;
             }
@@ -173,8 +173,8 @@
   
   
   #home{
-    background: rgb(2,36,250);
-  background: radial-gradient(circle, rgba(2,36,250,0.9500175070028011) 0%, rgba(12,185,240,0.9836309523809523) 50%, rgba(11,51,194,1) 100%);
+    background: rgb(46, 182, 9);
+  background: radial-gradient(circle, rgba(14, 203, 27, 0.95) 0%, rgba(29, 134, 79, 0.984) 50%, rgb(27, 101, 4) 100%);
   
     .slide{
       min-height: 100vh;
@@ -211,7 +211,7 @@
         }
   
         .price{
-          color: #FF0000;
+          color: green;
           font-size: 3.5rem;
           margin: .5rem 0;
         }
@@ -227,7 +227,7 @@
         position: absolute;
         top: 45%;
         transform: translateY(-50%);
-        color: #FF0000;
+        color: green;
         font-size: 6rem;
         background: none;
         border:  none;
@@ -276,7 +276,7 @@
           position: absolute;
           top: 50%;
           transform: translateY(-50%);
-          color: #FF0000;
+          color: green;
           font-size: 6rem;
           background: none;
           border:  none;
@@ -294,7 +294,7 @@
   
       .title{
         font-size: 3rem;
-        color: #FF0000;
+        color: green;
         margin-top: 5rem;
         margin-left: 6rem;
       }
@@ -326,7 +326,7 @@
   
             h3{
               font-size: 2rem;
-              color: #00008b;
+              color: green;
             }
   
             .stars{
@@ -337,7 +337,7 @@
             
             .price{
               font-size: 2rem;
-              color: #FF0000;
+              color: green;
             }
           }
   
@@ -368,10 +368,10 @@
             button{
               @include button();
               margin-top: 1rem;
-              background: #FF0000;
+              background: green;
   
               &:hover{
-                background: #00008b;
+                background: green($color: #000000);
               }
             }
             .share{
@@ -383,13 +383,13 @@
                 line-height: 4rem;
                 text-align: center;
                 background: #fff;
-                color: #FF0000;
+                color: green;
                 margin: 0 .5rem;
                 border-radius: 5rem;
   
                 &:hover{
                   text-decoration: none;
-                  background: #FF0000;
+                  background: green;
                   color: #fff;
   
                 }
@@ -414,7 +414,7 @@
     align-items: center;
     justify-content: center;
     flex-flow: column;
-    background: url(../assets/images/farmacia.jpg), linear-gradient(blue,) no-repeat;
+    background: url(../assets/imagenes/farmacia.jpg), linear-gradient(green,) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -427,7 +427,7 @@
         position: absolute;
         top: 0;
         transform: translateY(-50%);
-        color: #FF0000;
+        color: green;
         font-size: 6rem;
         background: none;
         border:  none;
@@ -447,7 +447,7 @@
     .heading{
       @include heading();
       padding-top: 2rem;
-      color: red;
+      color: green;
   
       &::after{
         background: #fff;
@@ -494,7 +494,7 @@
               text-align: center;
   
               i{
-                color: red;
+                color: green;
                 font-size: 1.6rem;
                 padding: 2rem;
               }
@@ -502,7 +502,7 @@
   
             h3{
               text-align: end;
-              color: #FF0000;
+              color: green;
             }
           }
         }
@@ -544,7 +544,7 @@
         }
   
         h3{
-          color: #FF0000;
+          color: green;
           font-size: 2.5rem;
           margin: 1rem 0;
         }
@@ -552,7 +552,7 @@
     }
   
     .deal{
-      background: url(../assets/images/farmacia-1.jpg), linear-gradient(red, red) no-repeat;
+      background: url(../assets/imagenes/farmacia-1.jpg), linear-gradient(rgb(54, 199, 5), rgb(54,199,5)) no-repeat;
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -573,7 +573,7 @@
   
         h4{
           font-size: 4rem;
-          color: #00008b;
+          color: green;
         }
         p{
           font-size: 2rem;
@@ -594,7 +594,7 @@
           @include button();
   
           &:hover{
-            background: #FF0000;
+            background: green;
           }
         }
       }
@@ -615,7 +615,7 @@
   
   #newsletter{
     width: 100vw;
-   background: linear-gradient(rgba(0,0,255,.4), rgba(0,0,255,.4)), url(../assets/images/perfumaria-1.jpg)no-repeat;
+   background: linear-gradient(rgba(61, 192, 13, 0.4), rgba(23, 179, 41, 0.487)), url(../assets/imagenes/perfumaria-1.jpg)no-repeat;
    background: cover;
    background-size: center;
    background-attachment: fixed;
@@ -650,10 +650,10 @@
     display: inline;
     @include button();
     margin-top: 2rem;
-    background: red;
+    background: green;
   
     &:hover{
-      background: #00008b;
+      background: green;
     }
   
    }
@@ -751,7 +751,7 @@
       border: .1rem solid rgba(255,255,255,.5);
   
       span{
-        color: #FF0000;
+        color: green;
       }
     }
     

@@ -109,7 +109,7 @@
     height: 100%;
     width: 35rem;
     background: #020024;
-    background: radial-gradient(circle, #020024 0%, rgba(9, 9, 121, 0.846325) 22%, #00d4ff 92%);
+    background: radial-gradient(circle, #012208 0%, rgba(6, 88, 16, 0.846) 22%, #0acf66 92%);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -144,14 +144,14 @@
   
   #header .navbar ul li a:hover {
     text-decoration: none;
-    background: #FF0000;
+    background: green;
     letter-spacing: .3rem;
     color: #fff;
   }
 
   #home {
-    background: #0224fa;
-    background: radial-gradient(circle, rgba(2, 36, 250, 0.950018) 0%, rgba(12, 185, 240, 0.983631) 50%, #0b33c2 100%);
+    background: green;
+    background: radial-gradient(circle, rgba(7, 93, 4, 0.95) 0%, rgba(10, 155, 78, 0.984) 50%, #177f0a 100%);
   }
   
   #home .slide {
@@ -192,7 +192,7 @@
   }
   
   #home .slide .content .price {
-    color: #FF0000;
+    color: green;
     font-size: 3.5rem;
     margin: .5rem 0;
   }
@@ -202,7 +202,7 @@
     border: none;
     height: 4rem;
     width: 20rem;
-    background: #00008b;
+    background: green;
     color: #fff;
     font-size: 1.5rem;
     cursor: pointer;
@@ -212,7 +212,7 @@
   }
   
   #home .slide .content button:hover {
-    background: #FF0000;
+    background: green;
     letter-spacing: .1rem;
   }
   
@@ -221,7 +221,7 @@
     top: 45%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
-    color: #FF0000;
+    color: green;
     font-size: 6rem;
     background: none;
     border: none;
@@ -267,7 +267,7 @@
   }
   
   #product .heading {
-    color: #00008b;
+    color: green;
     text-align: center;
     font-size: 3rem;
     padding-top: 5rem;
@@ -284,7 +284,7 @@
             transform: translateX(-50%);
     height: .3rem;
     width: 60%;
-    background: #FF0000;
+    background: green;
   }
   
   #product .product-container {
@@ -296,7 +296,7 @@
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
-    color: #FF0000;
+    color: green;
     font-size: 6rem;
     background: none;
     border: none;
@@ -313,7 +313,7 @@
   
   #product .product-container .title {
     font-size: 3rem;
-    color: #FF0000;
+    color: green;
     margin-top: 5rem;
     margin-left: 6rem;
   }
@@ -348,7 +348,7 @@
   
   #product .product-container .product-slider .product-card .content h3 {
     font-size: 2rem;
-    color: #00008b;
+    color: green;
   }
   
   #product .product-container .product-slider .product-card .content .stars i {
@@ -357,7 +357,7 @@
   
   #product .product-container .product-slider .product-card .content .price {
     font-size: 2rem;
-    color: #FF0000;
+    color: green;
   }
   
   #product .product-container .product-slider .product-card .info {
@@ -404,7 +404,7 @@
     border: none;
     height: 4rem;
     width: 20rem;
-    background: #00008b;
+    background: green;
     color: #fff;
     font-size: 1.5rem;
     cursor: pointer;
@@ -412,16 +412,16 @@
     border-radius: 3rem;
     text-transform: capitalize;
     margin-top: 1rem;
-    background: #FF0000;
+    background: green;
   }
   
   #product .product-container .product-slider .product-card .info button:hover {
-    background: #FF0000;
+    background: green;
     letter-spacing: .1rem;
   }
   
   #product .product-container .product-slider .product-card .info button:hover {
-    background: #00008b;
+    background: green;
   }
   
   #product .product-container .product-slider .product-card .info .share {
@@ -435,14 +435,14 @@
     line-height: 4rem;
     text-align: center;
     background: #fff;
-    color: #FF0000;
+    color: greenyellow;
     margin: 0 .5rem;
     border-radius: 5rem;
   }
   
   #product .product-container .product-slider .product-card .info .share a:hover {
     text-decoration: none;
-    background: #FF0000;
+    background: green;
     color: #fff;
   }
   
@@ -467,8 +467,8 @@
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
-    background: url(../assets/images/farmacia.jpg), -webkit-gradient(linear, left top, left bottom, from(blue)) no-repeat;
-    background: url(../assets/images/farmacia.jpg), linear-gradient(blue) no-repeat;
+    background: url(../assets/imagenes/farmacia.jpg), -webkit-gradient(linear, left top, left bottom, from(green)) no-repeat;
+    background: url(../assets/imagenes/farmacia.jpg), linear-gradient(green) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -504,7 +504,7 @@
     margin: 2rem 0;
     position: relative;
     padding-top: 2rem;
-    color: red;
+    color: rgb(14, 196, 14);
   }
   
   #review .heading::after {
@@ -606,7 +606,7 @@
   }
   
   #offer .heading {
-    color: #00008b;
+    color: green;
     text-align: center;
     font-size: 3rem;
     padding-top: 5rem;
@@ -719,12 +719,12 @@
   }
   
   #offer .deal .content button:hover {
-    background: #FF0000;
+    background: green;
     letter-spacing: .1rem;
   }
   
   #offer .deal .content button:hover {
-    background: #FF0000;
+    background: green;
   }
 
   #brand .brand-slider img {
@@ -735,7 +735,7 @@
 
   #newsletter {
     width: 100vw;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 255, 0.4)), to(rgba(0, 0, 255, 0.4))), url(../assets/imagenes/perfumaria-1.jpg) no-repeat;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 64, 9, 0.4)), to(rgba(11, 184, 54, 0.4))), url(../assets/imagenes/perfumaria-1.jpg) no-repeat;
     background: linear-gradient(rgba(11, 130, 60, 0.4), rgba(11, 183, 57, 0.4)), url(../assets/imagenes/perfumaria-1.jpg) no-repeat;
     background: cover;
     background-size: center;
@@ -796,11 +796,11 @@
     border-radius: 3rem;
     text-transform: capitalize;
     margin-top: 2rem;
-    background: red;
+    background:green;
   }
   
   #newsletter input[type="submit"]:hover {
-    background: #FF0000;
+    background: green;
     letter-spacing: .1rem;
   }
   
@@ -915,7 +915,7 @@
   }
   
   #footer .credit span {
-    color: #FF0000;
+    color: green;
   }
   
   .fa-times {
