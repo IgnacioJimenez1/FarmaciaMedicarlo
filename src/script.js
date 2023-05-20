@@ -23,7 +23,7 @@ $(document).ready(function(){
       if($(window).scrollTop() > 10){
         $('#header').css({
           'background':'#008000',
-          'box-shadow':'0 .1rem .3rem #000'
+          
         });
       }else{
         $('#header').css({
