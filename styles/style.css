@@ -58,6 +58,10 @@
     cursor: pointer;
   }
   
+  #header.search-active {
+    position: fixed;
+  }
+  
   #header .left .search-container {
     display: inline;
     position: relative;

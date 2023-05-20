@@ -1,11 +1,13 @@
 $(document).ready(function(){
 
-    $('#search, fa-search').mouseenter(function(){
-      $('.logo').hide();
+    $('#search, .fa-search').mouseenter(function(){
+      $('#header').addClass('search-active');
+      
     });
   
-    $('#search, fa-search').mouseleave(function(){
-      $('.logo').show();
+    $('#search, .fa-search').mouseleave(function(){
+      $('#header').removeClass('search-active');
+      
     });
   
     $('.fa-bars').click(function(){
