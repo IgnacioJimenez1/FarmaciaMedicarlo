@@ -41,6 +41,13 @@
 
       <div class="fas fa-shopping-cart"></div>
 
+      <div class="cart-container">
+        <h4>Carrito de compras:</h4>
+        <ul id="cart-items"></ul>
+        <p>Total: <span id="cart-total">$0</span></p>
+        <button id="checkout-btn">Comprar</button>
+      </div>
+
     </div>
 
     <!-- barra de navegación  -->
@@ -74,7 +81,7 @@
           <i class="fas fa-star"></i>
         </div>
         <h3 class="price"> $ 800 </h3>
-        <a href="#"><button> Agregar al carrito <i class="fas fa-shopping-cart"></i> </button></a>
+        <a href="#"><button class="add-to-cart-btn" data-name="Toallitas húmedas Babysec" data-price="800"> Agregar al carrito <i class="fas fa-shopping-cart"></i> </button></a>
       </div>
   
       <div class="image">
@@ -1492,8 +1499,12 @@
 
 <script src="src/owl.carousel.min.js"></script>
 
+
+
 <!-- custom js file -->
   <script src="src/script.js"></script>
+
+  <script src="src/carrito.js"></script>
 
 
 </body>
