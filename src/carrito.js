@@ -37,3 +37,16 @@
       alert('¡Gracias por tu compra!');
     });
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var cartToggle = document.getElementById('cart-toggle');
+    var cartContainer = document.getElementById('cart-items');
+  
+    cartToggle.addEventListener('click', function() {
+      if (cartContainer.style.display === 'none') {
+        cartContainer.style.display = 'block';
+      } else {
+        cartContainer.style.display = 'none';
+      }
+    });
+  });
