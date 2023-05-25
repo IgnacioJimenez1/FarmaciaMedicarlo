@@ -57,6 +57,39 @@
     font-size: 2rem;
     cursor: pointer;
   }
+
+  #cart-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    overflow-y: auto;
+  }
+  
+  #cart-toggle {
+    background-color: green;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  #cart-toggle:hover {
+    background-color: darkgreen;
+  }
+  
+  .checkout-btn,
+.cart-total {
+  display: none;
+}
+
+
   
   #header.search-active {
     position: fixed;
