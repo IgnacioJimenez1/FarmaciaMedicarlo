@@ -60,5 +60,39 @@ $(document).ready(function() {
       cartContainer.style.display = 'none';
     }
   });
+
+  // Búsqueda
+  $('#search-form').submit(function(e) {
+    e.preventDefault();
+
+    var searchTerm = $('#search-input').val();
+
+    // Aquí puedes realizar la lógica de búsqueda con el término ingresado
+
+    // Luego, puedes mostrar los resultados de búsqueda en la página
+    var searchResults = [];
+
+    for (var key in products) {
+      if (products.hasOwnProperty(key)) {
+        var product = products[key];
+
+        if (product.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+          searchResults.push(product);
+        }
+      }
+    }
+
+    // Mostrar los resultados de búsqueda
+    var searchList = $('#search-results');
+    searchList.empty();
+
+    for (var i = 0; i < searchResults.length; i++) {
+      var product = searchResults[i];
+      var listItem = $('<li></li>').text(product.name);
+      searchList.append(listItem);
+    }
+  });
 });
+
+
 
