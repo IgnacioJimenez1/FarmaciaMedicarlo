@@ -57,6 +57,10 @@
     font-size: 2rem;
     cursor: pointer;
   }
+  #header .left .fa-bag-shopping {
+    font-size: 2rem;
+    cursor: pointer;
+  }
 
   #cart-container {
     display: none;
