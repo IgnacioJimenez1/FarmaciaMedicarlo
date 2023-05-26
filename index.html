@@ -12,6 +12,7 @@
 
   <!-- font awesome cdn link -->
   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap">
   <link rel="stylesheet" href="styles/bootstrap.min.css">
@@ -39,15 +40,16 @@
         <input type="search" id="search" placeholder="Buscar">
       </div>
 
-      <div class="fas fa-shopping-cart"></div>
+      <div button id="cart-toggle" class="fas fa-shopping-cart"></button></div>
 
       <div class="cart-container">
         <ul id="cart-items"></ul>
-        <p>Total: <span id="cart-total">$0</span></p>
-        <button id="checkout-btn">Comprar</button>
-        <button id="cart-toggle">Abrir carrito</button>
+        <button id="checkout" class="checkout-btn">Comprar</button>
+        <p id="cart-total" class="cart-total">Total: $0.00</p>
 
       </div>
+      
+    
 
     </div>
 
