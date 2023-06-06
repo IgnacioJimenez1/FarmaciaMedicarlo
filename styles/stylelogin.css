@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.headera{
+    position: fixed;
+    top: 0;
+    left: 50;
+    width: 100%;
+    padding: 20px 12.5%;
+    background: linear-gradient(rgba(11, 130, 60, 0.4), rgba(11, 183, 57, 0.4));
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    z-index: 100;
+    -webkit-box-align: right;
+        -ms-flex-align: right;
+            align-items: right;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: .5rem 1.5rem;
+}
+.negrita{
+    font-weight: bold;
+}
+.logoA {
+    color: #000000;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+.logoA img {
+    border-radius: 20%;
+    width: 6rem;
+    padding: 0 .2rem;
+    position: left;
+  }
+  
+.logoA:hover {
+    text-decoration: none;
+  }
+
+.barnav{
+    position: inherit;
+    margin-left: 10rem;
+}
+.barnav a{
+    position: relative;
+    font-size: 17px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+.barnav a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: white;
+    border-radius: 5px;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: .5s;
+}
+
+.barnav a:hover::after{
+    transform: translate(0);
+    opacity: 1;
+}
+
+.backgraund{
+    width: 100%;
+    height: 100vh;
+    background: url(../assets/imagenes/perfumaria-1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    position:absolute;
+}
+
+.conte{
+    position: absolute;
+    width: 75%;
+    height: 550px;
+    background: linear-gradient(rgba(11, 130, 60, 0.4), rgba(11, 183, 57, 0.4)), url(../assets/imagenes/perfumaria-1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 40px;
+    margin-top: 90px;
+    margin-left: 150px;
+}
+
+.conte .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 58%;
+    height: 100%;
+    background-color: transparent;
+    padding: 10%;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.conte .log-box{
+    width: calc(100% - 58%);
+    height: 100%;
+    background: transparent;
+    top: 0;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+}
+
+.content h2{
+    font-size: 30px;
+    line-height: 1;
+}
+
+.content h2 span{
+    font-size: 20px;
+}
+
+.content p {
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.social-icons a i{
+    font-size: 22px;
+    color: black;
+    margin-right: 1rem;
+    transition: .5s ease;
+}
+
+.social-icons a:hover i{
+transform: scale(1.4);
+}
+
+.log-box .form-box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.log-box .form-box.login {
+    transform: translateY(0px) !important;
+    transition: transform .7s ease !important;
+}
+
+.log-box.active .form-box.login {
+    transform: translateY(600px) !important;
+    transition-delay: .0s !important;
+}
+
+.log-box .form-box.register {
+    transform: translateY(600px) !important;
+    transition: transform .7s ease !important;
+}
+
+.log-box.active .form-box.register {
+    transform: translateY(0px) !important;
+    transition-delay: .0s !important;
+}
+
+.form-box h2{
+    font-size: 25px;
+    text-align: center;
+}
+
+.form-box .input-box{
+    position: relative;
+    width: 300px;
+    height: 50px;
+    border-bottom: black 2px solid;
+    margin-top: 15px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 15px;
+    font-weight: 500;
+    padding-right: 25px;
+}
+
+.input-box label{
+    position:absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-45%);
+    font-size: 14px;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s ease;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+.input-box .icon{
+    position: absolute;
+    top: 11px;
+    right: 0;
+    font-size: 20px;
+}
+
+.rememberme{
+    font-size: 14.5px;
+    font-weight: 500;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between ;
+}
+
+.rememberme label input{
+        accent-color: rgb(255, 255, 255);
+        margin-right: 3px;
+        font-size: 10px;
+}
+
+.rememberme a{
+    color: black;
+    text-decoration: none;
+}
+
+.Terms{
+    font-size: 12.2px;
+    font-weight: 500;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between ;
+}
+
+.Terms label input{
+        accent-color: rgb(255, 255, 255);
+        margin-right: 3px;
+        font-size: 10px;
+}
+
+.bttn{
+    width: 35%;
+    height: 35px;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    background:linear-gradient(rgba(0, 255, 21, 0.4), rgba(18, 128, 47, 0.4));
+    margin-left: 65%;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.bttn2{
+    width: 35%;
+    height: 35px;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    background:linear-gradient(rgba(0, 255, 21, 0.4), rgba(18, 128, 47, 0.4));
+    margin-left: 65%;
+    margin-top: -10px;
+    margin-bottom: 1px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.form-box .log-register{
+font-size: 14.5px;
+font-weight: 500;
+text-align: center;
+margin-top: 25px;
+text-decoration: none;
+}
+
+.log-register p a{
+    color: #000000;
+    font-weight: 500;
+    text-decoration: none;
+}
+.log-register p a:hover{
+    text-decoration: underline;
+}
