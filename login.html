@@ -87,22 +87,22 @@
                     <h2>Regístrate aquí!</h2>
                     <div class="input-box">
                         <span class="icon"><i class='bx bxs-user-circle'></i></i></span>
-                        <input type="name" required>
+                        <input type="text" id="name" required>
                         <label>Nombre</label>
                     </div>
                     <div class="input-box">
                         <span class="icon"><i class='bx bxs-user-circle'></i></i></span>
-                        <input type="secondname" required>
+                        <input type="text" id="secondname" required>
                         <label>Apellido</label>
                     </div>
                     <div class="input-box">
                         <span class="icon"><i class='bx bxl-gmail'></i></span>
-                        <input type="emai" required>
+                        <input type="email" id="email" required>
                         <label>E-mail</label>
                     </div>
                     <div class="input-box">
                         <span class="icon"><i class='bx bxs-lock-alt'></i></span>
-                        <input type="password" required>
+                        <input type="password" id="password" required>
                         <label>Contraseña</label>
                     </div>
                     <div class="input-box">
@@ -117,7 +117,7 @@
                         <label><input type="checkbox">Quiero recibir notificaciones de Promociones y/o
                             <br>Actualizaciones de la empresa</label>
                     </div>
-                    <button type="submit" class="bttn2">Crear cuenta</button>
+                    <button type="button" class="bttn2" onclick="Guardar()">Crear cuenta</button>
                     <div class="log-register">
                         <p>Ya tienes una cuenta? <a href="#" class="login-register">Sí, la tengo</a></p>
                     </div>
@@ -127,5 +127,52 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="src/loger.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+
+        function Guardar() {
+
+
+            const nombre = document.getElementById("name")
+            const apellido = document.getElementById("secondname")
+            const correo = document.getElementById("email")
+            const contraseña = document.getElementById("password")
+
+
+
+
+            obj = {
+                "Nombre": nombre.value,            
+                "Apellido": apellido.value,
+                "Correo": correo.value,
+                "Contraseña": contraseña.value
+            }
+
+          //  console.log(obj)
+
+            post(obj)
+
+
+        }
+
+        function post(obj) {
+
+
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                data: obj,
+                url: "http://localhost:62020/api/Usuarios",
+                success: function (data) {
+                    alert("Proceso Exitos...!!!")
+                }
+
+
+            })
+
+        }
+
+    </script>
 </body>
 </html>

@@ -9,3 +9,4 @@ registerLink.addEventListener('click', () => {
 loginLink.addEventListener('click', () => {
   logbox.classList.remove('active');
 });
+
