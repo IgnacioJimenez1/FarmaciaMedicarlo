@@ -774,7 +774,7 @@
     margin: 4rem auto;
   }
 
-  #newsletter {
+  #Contacto {
     width: 100vw;
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 64, 9, 0.4)), to(rgba(11, 184, 54, 0.4))), url(../assets/imagenes/perfumaria-1.jpg) no-repeat;
     background: linear-gradient(rgba(11, 130, 60, 0.4), rgba(11, 183, 57, 0.4)), url(../assets/imagenes/perfumaria-1.jpg) no-repeat;
@@ -785,17 +785,17 @@
     text-align: center;
   }
   
-  #newsletter h1 {
+  #Contacto h1 {
     font-size: 6rem;
     color: #fff;
   }
   
-  #newsletter p {
+  #Contacto p {
     font-size: 3rem;
     color: #fff;
   }
   
-  #newsletter input[type="text"] {
+  #Contacto input[type="text"] {
     outline: none;
     border: none;
     background: #333;
@@ -807,23 +807,23 @@
     padding: 1.5rem;
   }
   
-  #newsletter input[type="text"]::-webkit-input-placeholder {
+  #Contacto input[type="text"]::-webkit-input-placeholder {
     color: #ccc;
   }
   
-  #newsletter input[type="text"]:-ms-input-placeholder {
+  #Contacto input[type="text"]:-ms-input-placeholder {
     color: #ccc;
   }
   
-  #newsletter input[type="text"]::-ms-input-placeholder {
+  #Contacto input[type="text"]::-ms-input-placeholder {
     color: #ccc;
   }
   
-  #newsletter input[type="text"]::placeholder {
+  #Contacto input[type="text"]::placeholder {
     color: #ccc;
   }
   
-  #newsletter input[type="submit"] {
+  #Contacto input[type="submit"] {
     display: inline;
     outline: none;
     border: none;
@@ -840,12 +840,12 @@
     background:green;
   }
   
-  #newsletter input[type="submit"]:hover {
+  #Contacto input[type="submit"]:hover {
     background: green;
     letter-spacing: .1rem;
   }
   
-  #newsletter input[type="submit"]:hover {
+  #Contacto input[type="submit"]:hover {
     background: #44932e;
   }
 
