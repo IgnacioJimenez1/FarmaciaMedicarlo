@@ -791,7 +791,7 @@
   }
   
   #Contacto p {
-    font-size: 3rem;
+    font-size: 1.5rem;
     color: #fff;
   }
   
@@ -828,7 +828,7 @@
     outline: none;
     border: none;
     height: 4rem;
-    width: 20rem;
+    width: 34rem;
     background: #44932e;
     color: #fff;
     font-size: 1.5rem;
@@ -837,7 +837,7 @@
     border-radius: 3rem;
     text-transform: capitalize;
     margin-top: 2rem;
-    background:green;
+    background: green;
   }
   
   #Contacto input[type="submit"]:hover {
@@ -848,6 +848,37 @@
   #Contacto input[type="submit"]:hover {
     background: #44932e;
   }
+
+  .contact-info {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .contact-info h2 {
+    font-size: 4rem; /* Aumentamos el tamaño de los h2 */
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+
+  .contact-info p {
+    font-size: 0.1rem; /* Reducimos el tamaño de los p */
+    line-height: 1,6;
+    display: flex;
+    align-items: center;
+    color: #555; /* Cambiamos el color a un gris medio oscuro */
+  }
+
+  .contact-info p i {
+    margin-right: 10px;
+  }
+
+  .contact-info p a {
+    text-decoration: none; /* Elimina la decoración predeterminada del enlace */
+    color: inherit; /* Hereda el color del texto del elemento padre */
+  }
+  
+
 
   #footer {
     padding: 2rem 0;
