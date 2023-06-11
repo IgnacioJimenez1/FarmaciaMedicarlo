@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="styles/stylelogin.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-
 <body>
     <header id="header" class="headera">
         <div class="logoA"><img src="assets/imagenes/icon.ico" alt=""></div>
@@ -36,11 +35,8 @@
                 <input type="search" id="search" placeholder="Buscar">
             </div>
         </div>
-
         <!-- barra de navegación  -->
-
     </header>
-
     <div class="backgraund"></div>
     <div class="conte">
         <div class="content">
@@ -74,14 +70,11 @@
                         <a href="#">Olvidaste tu contraseña?</a>
                     </div>
                     <button type="submit" class="bttn">Ingresar</button>
-
                     <div class="log-register">
                         <p>No tienes una cuenta? <a href="#" class="link-register">Regístrate aquí</a></p>
                     </div>
                 </form>
             </div>
-
-
             <div class="form-box register">
                 <form action="#">
                     <h2>Regístrate aquí!</h2>
@@ -128,51 +121,31 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="src/loger.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
     <script>
-
         function Guardar() {
-
-
             const nombre = document.getElementById("name")
             const apellido = document.getElementById("lastname")
             const correo = document.getElementById("email")
             const contraseña = document.getElementById("password")
-
-
-
-
             obj = {
                 "Nombre": nombre.value,            
                 "Apellido": apellido.value,
                 "Correo": correo.value,
                 "Contraseña": contraseña.value
             }
-
-          //  console.log(obj)
-
             post(obj)
-
-
         }
-
         function post(obj) {
-
-
             $.ajax({
                 type: "POST",
                 dataType: "json",
                 data: obj,
-                url: "http://localhost:62020/api/Usuarios",
+                url: "http://localhost:62020/api/Usuarios/",
                 success: function (data) {
                     alert("Proceso Exitos...!!!")
                 }
-
-
             })
-
         }
-
     </script>
 </body>
 </html>

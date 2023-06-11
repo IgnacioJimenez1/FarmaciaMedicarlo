@@ -165,53 +165,68 @@
 
 	<script>
 
-        function Buscar() {
+		function Buscar() {
 			const id = document.getElementById("id")
-	
+
 			get(parseInt(id.value))
 
 			console.log(id)
 		}
-        function Modificar()
-        {
-            const id = document.getElementById("id")
-            const nombre = document.getElementById("txtNombre")
-            const apellido = document.getElementById("txtApellido")
+		function Modificar() {
+			const id = document.getElementById("id")
+			const Nombre = document.getElementById("name")
+			const Apellido = document.getElementById("lastname")
+			const Email = document.getElementById("email")
+			const Localidad = document.getElementById("localidad")
+			const Direc = document.getElementById("direc")
+			const Contraseña = document.getElementById("password")
 
-            obj = {
-                "Nombre": nombre.value,
-                "Apellido": apellido.value,
-            }
-            put( parseInt(id.value),obj)
-        }
-        function get(id) {
-            $.ajax({
-                type: "GET",
-                dataType: "json",
-                url: "http://localhost:62020/api/Usuarios" + id,
-                success: function (data) {
-                    console.log(data)
+			obj = {
+				"Nombre": Nombre.value,
+				"Apellido": Apellido.value,
+				"Correo": Email.value,
+				"Localidad": Localidad.value,
+				"Dirección": Direc.value,
+				"Contraseña": Contraseña.value
+			}
+			put(parseInt(id.value), obj)
+		}
+		function get(id) {
+			$.ajax({
+				type: "GET",
+				dataType: "json",
+				url: "http://localhost:62020/api/Usuarios/" + id,
+				success: function (data) {
+					console.log(data)
 
-                    const nombre = document.getElementById("txtNombre")
-                    const apellido = document.getElementById("txtApellido")
+					const Nombre = document.getElementById("name")
+					const Apellido = document.getElementById("lastname")
+					const Email = document.getElementById("email")
+					const Localidad = document.getElementById("localidad")
+					const Direc = document.getElementById("direc")
+					const Contraseña = document.getElementById("password")
 
-                    nombre.value = data.Nombre
-                    apellido.value = data.Apellido
-                }
-            })
-        }
-        function put(id, obj) {
-            $.ajax({
-                type: "PUT",
-                dataType: "json",
-                data: obj,
-                url: "http://localhost:50494/api/Alumno/" + id,
-                success: function (data) {
-                    alert("Proceso Exitos...!!!")
-                }
-            })
-        }
-    </script>
+					Nombre.value = data.Nombre
+					Apellido.value = data.Apellido
+					Email.value = data.Email
+					Localidad.value = data.Localidad
+					Direc.value = data.Direc
+					Contraseña.value = data.Contraseña
+				}
+			})
+		}
+		function put(id, obj) {
+			$.ajax({
+				type: "PUT",
+				dataType: "json",
+				data: obj,
+				url: "http://localhost:62020/api/Usuarios/" + id,
+				success: function (data) {
+					alert("Proceso Exitos...!!!")
+				}
+			})
+		}
+	</script>
 
 </body>
 
