@@ -878,7 +878,18 @@
     color: inherit; /* Hereda el color del texto del elemento padre */
   }
   
+ #mapa{
+  margin: 0%;
+  background-color: gray;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+ }
 
+ 
 
   #footer {
     padding: 2rem 0;
