@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Account Settings UI Design</title>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<link rel="stylesheet" type="text/css"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/styleProfile.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="styles/styleCarga.css">
+</head>
+
+<body>
+	<section class="py-5 my-5">
+		<div class="container">
+			<h1 class="mb-5">Configuracion de Productos</h1>
+			<div class="bg-white shadow rounded-lg d-block d-sm-flex">
+				<div class="profile-tab-nav border-right">
+					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+						<a class="nav-link active" id="account-tab" data-toggle="pill" href="#Agregar" role="tab"
+							aria-controls="account" aria-selected="true">
+							<i class="fa fa-home text-center mr-1"></i>
+							Agregar
+						</a>
+						<a class="nav-link" id="password-tab" data-toggle="pill" href="#EditarEliminar" role="tab"
+							aria-controls="password" aria-selected="false">
+							<i class="fa fa-key text-center mr-1"></i>
+							Editar/Eliminar
+						</a>
+						<a class="nav-link" id="security-tab" data-toggle="pill" href="#ListaProductos" role="tab"
+							aria-controls="security" aria-selected="false">
+							<i class="fa fa-user text-center mr-1"></i>
+							Lista de Productos
+						</a>
+					</div>
+				</div>
+				<div class="tab-content p-4 p-md-5" id="v-pills-tabContent">
+					<div class="tab-pane fade show active" id="Agregar" role="tabpanel" aria-labelledby="account-tab">
+						<h3 class="mb-4">Agregar Productos</h3>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Foto del Producto</label>
+									<input type="file" accept=".png, .jpg" id="Imagen">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Nombre</label>
+									<input type="text" class="form-control" id="Nombre">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Stock</label>
+									<input type="number" class="form-control" id="Stock">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Precio</label>
+									<input type="number" class="form-control" id="Precio">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<label>Descripcion</label>
+									<textarea class="form-control" rows="4" id="Descripcion"></textarea>
+								</div>
+							</div>
+						</div>
+						<div>
+							<button class="btn btn-primary" onclick="Agregar()">Agregar</button>
+							<button class="btn btn-light">Cancel</button>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="EditarEliminar" role="tabpanel" aria-labelledby="password-tab">
+						<h3 class="mb-4">Edición de Productos</h3>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Id del Producto</label>
+									<input type="text" class="form-control" id="id">
+								</div>
+
+								<div>
+									<button class="btn btn-primary" onclick="Buscar()">Buscar Producto</button>
+								</div>
+								<hr>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Foto del Producto</label>
+									<input type="file" accept=".png, .jpg" id="Imagen">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Nombre</label>
+									<input type="text" class="form-control" id="Nombre">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Stock</label>
+									<input type="number" class="form-control" id="Stock">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Precio</label>
+									<input type="number" class="form-control" id="Precio">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<label>Descripcion</label>
+									<textarea class="form-control" rows="4" id="Descripcion"></textarea>
+								</div>
+							</div>
+						</div>
+						<div>
+							<button class="btn btn-primary" onclick="Modificar()">Modificar</button>
+							<button class="btn btn-light">Cancel</button>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="ListaProductos" role="tabpanel" aria-labelledby="security-tab">
+						<h3 class="mb-4">Security Settings</h3>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Login</label>
+									<input type="text" class="form-control">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Two-factor auth</label>
+									<input type="text" class="form-control">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="recovery">
+										<label class="form-check-label" for="recovery">
+											Recovery
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<button class="btn btn-primary">Update</button>
+							<button class="btn btn-light">Cancel</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+
+		/* Agregar Productos */
+		function Agregar() {
+			const Nombre = document.getElementById("Nombre")
+			const Descripcion = document.getElementById("Descripcion")
+			const Precio = document.getElementById("Precio")
+			const Stock = document.getElementById("Stock")
+			const Imagen = document.getElementById("Imagen")
+			obj = {
+				"Nombre": Nombre.value,
+				"Descripcion": Descripcion.value,
+				"Precio": Precio.value,
+				"Stock": Stock.value,
+				"Imagen": Imagen.value
+			}
+			post(obj)
+		}
+		function post(obj) {
+			$.ajax({
+				type: "POST",
+				dataType: "json",
+				data: obj,
+				url: "http://localhost:62020/api/Productos/",
+				success: function (data) {
+					alert("Proceso Exitos...!!!")
+				}
+			})
+		}
+
+
+
+		/* Editar productos */
+		function Buscar() {
+			const id = document.getElementById("id")
+
+			get(parseInt(id.value))
+
+			console.log(id)
+		}
+		function Modificar() {
+			const Nombre = document.getElementById("Nombre")
+			const Descripcion = document.getElementById("Descripcion")
+			const Precio = document.getElementById("Precio")
+			const Stock = document.getElementById("Stock")
+			const Imagen = document.getElementById("Imagen")
+
+			obj = {
+				"Nombre": Nombre.value,
+				"Descripcion": Descripcion.value,
+				"Precio": Precio.value,
+				"Stock": Stock.value,
+				"Imagen": Imagen.value
+			}
+			put(parseInt(id.value), obj)
+		}
+
+
+		function get(id) {
+			$.ajax({
+				type: "GET",
+				dataType: "json",
+				url: "http://localhost:62020/api/Productos/" + id,
+				success: function (data) {
+					console.log(data)
+
+					const Nombre = document.getElementById("Nombre")
+					const Descripcion = document.getElementById("Descripcion")
+					const Precio = document.getElementById("Precio")
+					const Stock = document.getElementById("Stock")
+					const Imagen = document.getElementById("Imagen")
+
+					Nombre.value = data.nombre
+					Descripcion.value = data.descripcion
+					Precio.value = data.precio
+					Stock.value = data.stock
+					Imagen.value = data.imagen
+				}
+			})
+		}
+		function put(id, obj) {
+			$.ajax({
+				type: "PUT",
+				dataType: "json",
+				data: obj,
+				url: "http://localhost:62020/api/Productos/" + id,
+				success: function (data) {
+					alert("Proceso Exitos...!!!")
+				}
+			})
+		}
+	</script>
+
+</body>
+
+</html>
