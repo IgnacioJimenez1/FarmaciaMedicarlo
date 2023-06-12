@@ -79,89 +79,86 @@
 					</div>
 					<div class="tab-pane fade" id="EditarEliminar" role="tabpanel" aria-labelledby="password-tab">
 						<h3 class="mb-4">Edición de Productos</h3>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>Id del Producto</label>
-									<input type="text" class="form-control" id="id">
-								</div>
-
-								<div>
-									<button class="btn btn-primary" onclick="Buscar()">Buscar Producto</button>
-								</div>
-								<hr>
+						<div class="row"></div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label>Id del Producto</label>
+								<input type="text" class="form-control" id="id">
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>Foto del Producto</label>
-									<input type="file" accept=".png, .jpg" id="Imagen">
-								</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label>Foto del Producto</label>
+								<input type="file" accept=".png, .jpg" id="Imagen">
 							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>Nombre</label>
-									<input type="text" class="form-control" id="Nombre">
-								</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label>Nombre</label>
+								<input type="text" class="form-control" id="Nombre">
 							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>Stock</label>
-									<input type="number" class="form-control" id="Stock">
-								</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label>Stock</label>
+								<input type="number" class="form-control" id="Stock">
 							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>Precio</label>
-									<input type="number" class="form-control" id="Precio">
-								</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label>Precio</label>
+								<input type="number" class="form-control" id="Precio">
 							</div>
+						</div>
+						<div>
 							<div class="col-md-12">
 								<div class="form-group">
 									<label>Descripcion</label>
 									<textarea class="form-control" rows="4" id="Descripcion"></textarea>
 								</div>
 							</div>
-						</div>
-						<div>
-							<button class="btn btn-primary" onclick="Modificar()">Modificar</button>
-							<button class="btn btn-light">Cancel</button>
+							<div>
+								<button class="btn btn-primary" onclick="Buscar()">Buscar Producto</button>
+								<button class="btn btn-primary" onclick="Modificar()">Modificar</button>
+								<button class="btn btn-light">Cancel</button>
+							</div>
 						</div>
 					</div>
-					<div class="tab-pane fade" id="ListaProductos" role="tabpanel" aria-labelledby="security-tab">
-						<h3 class="mb-4">Security Settings</h3>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>Login</label>
-									<input type="text" class="form-control">
-								</div>
+					
+				</div>
+				<div class="tab-pane fade" id="ListaProductos" role="tabpanel" aria-labelledby="security-tab">
+					<h3 class="mb-4">Security Settings</h3>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label>Login</label>
+								<input type="text" class="form-control">
 							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>Two-factor auth</label>
-									<input type="text" class="form-control">
-								</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label>Two-factor auth</label>
+								<input type="text" class="form-control">
 							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<div class="form-check">
-										<input class="form-check-input" type="checkbox" value="" id="recovery">
-										<label class="form-check-label" for="recovery">
-											Recovery
-										</label>
-									</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="recovery">
+									<label class="form-check-label" for="recovery">
+										Recovery
+									</label>
 								</div>
 							</div>
 						</div>
-						<div>
-							<button class="btn btn-primary">Update</button>
-							<button class="btn btn-light">Cancel</button>
-						</div>
+					</div>
+					<div>
+						<button class="btn btn-primary">Update</button>
+						<button class="btn btn-light">Cancel</button>
 					</div>
 				</div>
 			</div>
+		</div>
 		</div>
 	</section>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
@@ -209,6 +206,7 @@
 			console.log(id)
 		}
 		function Modificar() {
+			const id = document.getElementById("id")
 			const Nombre = document.getElementById("Nombre")
 			const Descripcion = document.getElementById("Descripcion")
 			const Precio = document.getElementById("Precio")
