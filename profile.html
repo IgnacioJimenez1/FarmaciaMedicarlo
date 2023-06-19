@@ -176,7 +176,7 @@
 			const id = document.getElementById("id")
 			const Nombre = document.getElementById("name")
 			const Apellido = document.getElementById("lastname")
-			const Email = document.getElementById("email")
+			const Correo = document.getElementById("email")
 			const Localidad = document.getElementById("localidad")
 			const Direc = document.getElementById("direc")
 			const Contraseña = document.getElementById("password")
@@ -185,7 +185,7 @@
 			obj = {
 				"Nombre": Nombre.value,
 				"Apellido": Apellido.value,
-				"Correo": Email.value,
+				"Correo": Correo.value,
 				"Direccion": Direc.value,
 				"Localidad": Localidad.value,
 				"Telefono": Telefono.value,
@@ -204,7 +204,7 @@
 					
 					const Nombre = document.getElementById("name")
 					const Apellido = document.getElementById("lastname")
-					const Email = document.getElementById("email")
+					const Correo = document.getElementById("email")
 					const Localidad = document.getElementById("localidad")
 					const Direc = document.getElementById("direc")
 					const Contraseña = document.getElementById("password")
@@ -213,11 +213,11 @@
 					
 					Nombre.value = data.Nombre
 					Apellido.value = data.Apellido
-					Email.value = data.Email
+					Correo.value = data.Correo
 					Localidad.value = data.Localidad
-					Direc.value = data.Direc
+					Direc.value = data.Direccion
 					Contraseña.value = data.Contraseña
-					Telefono.value = document.Telefono
+					Telefono.value = data.Telefono
 
 					
 				}
