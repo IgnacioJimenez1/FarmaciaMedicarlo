@@ -219,17 +219,21 @@
 				success: function (data) {
 					console.log(data)
 
+					const id = document.getElementById("id")
 					const Nombre = document.getElementById("NombreModificar")
 					const Descripcion = document.getElementById("DescripcionModificar")
 					const Precio = document.getElementById("PrecioModificar")
 					const Stock = document.getElementById("StockModificar")
 
-
+					id.value = data.id
 					Nombre.value = data.nombre
 					Descripcion.value = data.descripcion
 					Precio.value = data.precio
 					Stock.value = data.stock
 
+					
+
+					id.focus()
 				}
 			})
 		}
