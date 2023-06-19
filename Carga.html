@@ -76,7 +76,7 @@
 						<hr>
 						<div>
 							<button class="btn btn-primary" onclick="Agregar()">Agregar</button>
-							<button class="btn btn-light">Cancel</button>
+							<button class="btn btn-light"   onclick="">Cancelar</button>
 						</div>
 					</div>
 					<div class="tab-pane fade" id="EditarEliminar" role="tabpanel" aria-labelledby="password-tab">
@@ -125,7 +125,7 @@
 									<button class="btn btn-primary" onclick="Buscar()">Buscar Producto</button>
 									<button class="btn btn-primary" onclick="Modificar()">Modificar</button>
 									<button class="btn btn-primary" onclick="Eliminar()">Eliminar</button>
-									<button class="btn btn-light">Cancel</button>
+									<button class="btn btn-light"   onclick="Cancel()">Cancelar</button>
 									
 								</div>
 							</div>
@@ -353,6 +353,27 @@
 			})
 
 		}
+
+		function Cancel(){
+
+					const id = document.getElementById("id")
+					const Nombre = document.getElementById("NombreModificar")
+					const Descripcion = document.getElementById("DescripcionModificar")
+					const Precio = document.getElementById("PrecioModificar")
+					const Stock = document.getElementById("StockModificar")
+
+					id.value = ""
+					Nombre.value = ""
+					Descripcion.value = ""
+					Precio.value = ""
+					Stock.value = ""
+
+					id.focus()
+
+		}
+
+		
+
 
 	</script>
 
