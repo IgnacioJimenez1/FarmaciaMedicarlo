@@ -79,82 +79,71 @@
 					</div>
 					<div class="tab-pane fade" id="EditarEliminar" role="tabpanel" aria-labelledby="password-tab">
 						<h3 class="mb-4">Edición de Productos</h3>
-						<div class="row"></div>
 						<div class="col-md-6">
 							<div class="form-group">
 								<label>Id del Producto</label>
 								<input type="text" class="form-control" id="id">
 							</div>
+							<hr>
 						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label>Foto del Producto</label>
-								<input type="file" accept=".png, .jpg" id="ImagenModificar">
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label>Nombre</label>
-								<input type="text" class="form-control" id="NombreModificar">
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label>Stock</label>
-								<input type="text" class="form-control" id="StockModificar">
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label>Precio</label>
-								<input type="text" class="form-control" id="PrecioModificar">
-							</div>
-						</div>
-						<div>
-							<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-6">
 								<div class="form-group">
-									<label>Descripcion</label>
-									<textarea class="form-control" rows="4" id="DescripcionModificar"></textarea>
+									<label>Foto del Producto</label>
+									<input type="file" accept=".png, .jpg" id="ImagenModificar">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Nombre</label>
+									<input type="text" class="form-control" id="NombreModificar">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Stock</label>
+									<input type="text" class="form-control" id="StockModificar">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Precio</label>
+									<input type="text" class="form-control" id="PrecioModificar">
 								</div>
 							</div>
 							<div>
-								<button class="btn btn-primary" onclick="Buscar()">Buscar Producto</button>
-								<button class="btn btn-primary" onclick="Modificar()">Modificar</button>
-								<button class="btn btn-light">Cancel</button>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-				<div class="tab-pane fade" id="ListaProductos" role="tabpanel" aria-labelledby="security-tab">
-					<h3 class="mb-4">Security Settings</h3>
-					<div class="row">
-						<div class="col-md-6">
-							<div class="form-group">
-								<label>Login</label>
-								<input type="text" class="form-control">
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label>Two-factor auth</label>
-								<input type="text" class="form-control">
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<div class="form-check">
-									<input class="form-check-input" type="checkbox" value="" id="recovery">
-									<label class="form-check-label" for="recovery">
-										Recovery
-									</label>
+								<div class="col-md-12">
+									<div class="form-group">
+										<label>Descripcion</label>
+										<textarea class="form-control" rows="4" id="DescripcionModificar"></textarea>
+									</div>
+								</div>
+								<div>
+									<button class="btn btn-primary" onclick="Buscar()">Buscar Producto</button>
+									<button class="btn btn-primary" onclick="Modificar()">Modificar</button>
+									<button class="btn btn-light">Cancel</button>
+									<button class="btn btn-primary" onclick="Eliminar()">Eliminar</button>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div>
-						<button class="btn btn-primary">Update</button>
-						<button class="btn btn-light">Cancel</button>
+
+					<div class="tab-pane fade" id="ListaProductos" role="tabpanel" aria-labelledby="security-tab">
+						<h3 class="mb-4">Listado de Productos</h3>
+						<div class="row">
+							<table>
+								<thead>
+									<th>Nombre</th>
+									<th>Descripcion</th>
+									<th>Precio</th>
+									<th>Stock</th>
+								</thead>
+								<tbody>
+
+
+								</tbody>
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -188,7 +177,7 @@
 				type: "POST",
 				dataType: "json",
 				data: obj,
-				url: "http://localhost:62020/api/Productos/",
+				url: "http://localhost:62020/api/Productos",
 				success: function (data) {
 					alert("Proceso Exitos...!!!")
 				}
@@ -234,13 +223,13 @@
 					const Descripcion = document.getElementById("DescripcionModificar")
 					const Precio = document.getElementById("PrecioModificar")
 					const Stock = document.getElementById("StockModificar")
-					
+
 
 					Nombre.value = data.nombre
 					Descripcion.value = data.descripcion
 					Precio.value = data.precio
 					Stock.value = data.stock
-					
+
 				}
 			})
 		}
@@ -251,10 +240,99 @@
 				data: obj,
 				url: "http://localhost:62020/api/Productos/" + id,
 				success: function (data) {
-					alert("Proceso Exitos...!!!")
+
+					const id = document.getElementById("id")
+					const Nombre = document.getElementById("NombreModificar")
+					const Descripcion = document.getElementById("DescripcionModificar")
+					const Precio = document.getElementById("PrecioModificar")
+					const Stock = document.getElementById("StockModificar")
+
+					id.value = ""
+					Nombre.value = ""
+					Descripcion.value = ""
+					Precio.value = ""
+					Stock.value = ""
+
+					id.focus()
 				}
 			})
 		}
+
+		//Eliminar Productos
+
+		function Eliminar() {
+
+			const id = document.getElementById("id")
+			del(parseInt(id.value))
+
+		}
+
+		function del(id) {
+			$.ajax({
+				type: "Delete",
+				dataType: "json",
+				url: "http://localhost:62020/api/Productos/" + id,
+				success: function (data) {
+
+
+					const id = document.getElementById("id")
+					const Nombre = document.getElementById("NombreModificar")
+					const Descripcion = document.getElementById("DescripcionModificar")
+					const Precio = document.getElementById("PrecioModificar")
+					const Stock = document.getElementById("StockModificar")
+
+					id.value = ""
+					Nombre.value = ""
+					Descripcion.value = ""
+					Precio.value = ""
+					Stock.value = ""
+					id.focus()
+				}
+			})
+
+
+		}
+
+
+		//Listado de Productos
+
+		Get()
+
+		function Get() {
+			$.ajax({
+				type: "GET",
+				dataType: "json",
+				url: "http://localhost:62020/api/Productos/",
+				success: function (data) {
+					//alert(data)
+
+					const tbody = document.querySelector("tbody");
+
+					data.forEach(o => {
+						let _tr = `<tr>
+                <td>${o.nombre}</td>
+                <td>${o.descripcion}</td>
+                <td>${o.precio}</td>
+                <td>${o.stock}</td>
+				
+				</tr>`
+
+						tbody.innerHTML += _tr;
+					});
+
+
+				},
+				error: function (error) {
+
+					console.log(error)
+				}
+
+
+
+			})
+
+		}
+
 	</script>
 
 </body>

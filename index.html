@@ -1455,7 +1455,7 @@
       <input type="text" id="email" name="email" placeholder="Email" required><br><br>
       <input type="text" id="telefono" name="telefono" placeholder="Teléfono" required><br><br>
       <textarea id="mensaje" name="mensaje" rows="4" placeholder="Mensaje" required style="width: 34rem; resize: both; font-size: 1.5rem;"></textarea><br><br>
-      <input type="submit" value="Enviar" required style="width: 34rem;">
+      <input type="submit" value="Enviar" required style="width: 34rem;" onclick="Guardar()">
     </form>
 
     <div class="contact-info">
@@ -1551,6 +1551,32 @@
 
   <script src="src/Contacto.js"></script>
 
+  <script>
+    function Guardar() {
+                const Nombre = document.getElementById("nombre")
+                const Email = document.getElementById("email")
+                const Telefono = document.getElementById("telefono")
+                const Mensaje = document.getElementById("mensaje")
+                obj = {
+                    "nombre": Nombre.value,            
+                    "email": Email.value,
+                    "telefono": Telefono.value,
+                    "mensaje": Mensaje.value
+                }
+                post(obj)
+            }
+            function post(obj) {
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    data: obj,
+                    url: "http://localhost:62020/api/Main/",
+                    success: function (data) {
+                        alert("Proceso Exitos...!!!")
+                    }
+                })
+            }
+    </script>
 
 </body>
 </html>

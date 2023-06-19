@@ -1,21 +1,59 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="TestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Contacto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="telefono" Type="nvarchar" MaxLength="50" />
+    <Property Name="mensaje" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Laboratorios">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="direccion" Type="varchar" MaxLength="100" />
+    <Property Name="telefono" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ObrasSociales">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="Obra" Type="varchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="Productos">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Nombre" Type="nvarchar" MaxLength="50" />
-    <Property Name="Marca" Type="nvarchar" MaxLength="50" />
-    <Property Name="Descripción" Type="nvarchar" MaxLength="50" />
-    <Property Name="Imagen" Type="image" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" />
+    <Property Name="descripcion" Type="varchar" MaxLength="200" />
+    <Property Name="precio" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="stock" Type="int" />
+    <Property Name="imagen" Type="image" />
   </EntityType>
-  <EntityType Name="Proveedores">
+  <EntityType Name="Rol">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Droguerías" Type="nvarchar" MaxLength="50" />
+    <Property Name="descripcion" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="Usuarios">
     <Key>
@@ -25,13 +63,19 @@
     <Property Name="Nombre" Type="nvarchar" MaxLength="50" />
     <Property Name="Apellido" Type="nvarchar" MaxLength="50" />
     <Property Name="Correo" Type="nvarchar" MaxLength="50" />
-    <Property Name="Contraseña" Type="nvarchar" MaxLength="50" />
     <Property Name="Direccion" Type="nvarchar" MaxLength="50" />
     <Property Name="Localidad" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="50" />
+    <Property Name="Contraseña" Type="nvarchar" MaxLength="50" />
+    <Property Name="Imagen" Type="image" />
   </EntityType>
   <EntityContainer Name="TestModelStoreContainer">
+    <EntitySet Name="Contacto" EntityType="Self.Contacto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Laboratorios" EntityType="Self.Laboratorios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ObrasSociales" EntityType="Self.ObrasSociales" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Productos" EntityType="Self.Productos" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Proveedores" EntityType="Self.Proveedores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Rol" EntityType="Self.Rol" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

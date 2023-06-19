@@ -10,7 +10,7 @@ namespace WebApplication1
     {
         public static void Register(HttpConfiguration config)
         {
-            var cors = new EnableCorsAttribute("http://localhost:59323", "*", "GET,POST,PUT,DELETE");
+            var cors = new EnableCorsAttribute("http://127.0.0.1:5500", "*", "GET,POST,PUT,DELETE");
 
             config.EnableCors(cors);
             // Configuración y servicios de API web

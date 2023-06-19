@@ -12,16 +12,10 @@ namespace WebApplication1
     using System;
     using System.Collections.Generic;
     
-    public partial class Usuarios
+    public partial class ObrasSociales
     {
         public int id { get; set; }
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public string Correo { get; set; }
-        public string Direccion { get; set; }
-        public string Localidad { get; set; }
-        public string Telefono { get; set; }
-        public string Contraseña { get; set; }
-        public byte[] Imagen { get; set; }
+        public string nombre { get; set; }
+        public string Obra { get; set; }
     }
 }

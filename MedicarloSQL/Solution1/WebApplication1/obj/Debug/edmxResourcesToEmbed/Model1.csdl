@@ -1,21 +1,58 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="TestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="TestEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Laboratorios" EntityType="TestModel.Laboratorios" />
+    <EntitySet Name="ObrasSociales" EntityType="TestModel.ObrasSociales" />
+    <EntitySet Name="Productos" EntityType="TestModel.Productos" />
+    <EntitySet Name="Rol" EntityType="TestModel.Rol" />
+    <EntitySet Name="sysdiagrams" EntityType="TestModel.sysdiagrams" />
+    <EntitySet Name="Usuarios" EntityType="TestModel.Usuarios" />
+    <EntitySet Name="Contacto" EntityType="TestModel.Contacto" />
+  </EntityContainer>
+  <EntityType Name="Laboratorios">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="direccion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ObrasSociales">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Obra" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
   <EntityType Name="Productos">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Marca" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Descripción" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Imagen" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="precio" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="stock" Type="Int32" />
+    <Property Name="imagen" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
-  <EntityType Name="Proveedores">
+  <EntityType Name="Rol">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Droguerías" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="Usuarios">
     <Key>
@@ -25,13 +62,20 @@
     <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Contraseña" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Localidad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Contraseña" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Imagen" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
-  <EntityContainer Name="TestEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Productos" EntityType="Self.Productos" />
-    <EntitySet Name="Proveedores" EntityType="Self.Proveedores" />
-    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
-  </EntityContainer>
+  <EntityType Name="Contacto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mensaje" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

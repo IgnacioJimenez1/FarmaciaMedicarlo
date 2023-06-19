@@ -53,6 +53,7 @@ namespace WebApplication1.Controllers
                     oItem.descripcion = value.descripcion;
                     oItem.precio = value.precio;
                     oItem.stock = value.stock;
+                    oItem.imagen = value.imagen;
                     db.Entry(oItem).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
                 }

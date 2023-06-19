@@ -15,9 +15,10 @@ namespace WebApplication1
     public partial class Productos
     {
         public int id { get; set; }
-        public string Nombre { get; set; }
-        public string Marca { get; set; }
-        public string Descripción { get; set; }
-        public byte[] Imagen { get; set; }
+        public string nombre { get; set; }
+        public string descripcion { get; set; }
+        public Nullable<decimal> precio { get; set; }
+        public Nullable<int> stock { get; set; }
+        public byte[] imagen { get; set; }
     }
 }

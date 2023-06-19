@@ -4,10 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="1b7b688c0b7a470eac55f1c151387df6" Name="Diagram1">
-        <EntityTypeShape EntityType="TestModel.Productos" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TestModel.Proveedores" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TestModel.Usuarios" Width="1.5" PointX="4.625" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="1b7b688c0b7a470eac55f1c151387df6" Name="Diagram1" ZoomLevel="77">
+        <EntityTypeShape EntityType="TestModel.Laboratorios" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TestModel.ObrasSociales" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TestModel.Productos" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="TestModel.Rol" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="TestModel.sysdiagrams" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TestModel.Usuarios" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="TestModel.Contacto" Width="1.5" PointX="0.75" PointY="6.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
