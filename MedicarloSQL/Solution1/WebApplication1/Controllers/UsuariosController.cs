@@ -52,6 +52,9 @@ namespace WebApplication1.Controllers
                     oItem.Nombre = value.Nombre;
                     oItem.Apellido = value.Apellido;
                     oItem.Correo = value.Correo;
+                    oItem.Direccion = value.Direccion;
+                    oItem.Localidad = value.Localidad;
+                    oItem.Telefono = value.Telefono;
                     oItem.Contraseña = value.Contraseña;
                     db.Entry(oItem).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();

@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Account Settings UI Design</title>
+	<title>Configuración de Perfil</title>
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 	<link rel="stylesheet" type="text/css"
 		href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -180,13 +180,15 @@
 			const Localidad = document.getElementById("localidad")
 			const Direc = document.getElementById("direc")
 			const Contraseña = document.getElementById("password")
+			const Telefono = document.getElementById("tel")
 
 			obj = {
 				"Nombre": Nombre.value,
 				"Apellido": Apellido.value,
 				"Correo": Email.value,
+				"Direccion": Direc.value,
 				"Localidad": Localidad.value,
-				"Dirección": Direc.value,
+				"Telefono": Telefono.value,
 				"Contraseña": Contraseña.value
 			}
 			put(parseInt(id.value), obj)
@@ -199,19 +201,25 @@
 				success: function (data) {
 					console.log(data)
 
+					
 					const Nombre = document.getElementById("name")
 					const Apellido = document.getElementById("lastname")
 					const Email = document.getElementById("email")
 					const Localidad = document.getElementById("localidad")
 					const Direc = document.getElementById("direc")
 					const Contraseña = document.getElementById("password")
+					const Telefono = document.getElementById("tel")
 
+					
 					Nombre.value = data.Nombre
 					Apellido.value = data.Apellido
 					Email.value = data.Email
 					Localidad.value = data.Localidad
 					Direc.value = data.Direc
 					Contraseña.value = data.Contraseña
+					Telefono.value = document.Telefono
+
+					
 				}
 			})
 		}
