@@ -76,7 +76,7 @@
 						<hr>
 						<div>
 							<button class="btn btn-primary" onclick="Agregar()">Agregar</button>
-							<button class="btn btn-light"   onclick="">Cancelar</button>
+							<button class="btn btn-light"   onclick="Cancel1()">Cancelar</button>
 						</div>
 					</div>
 					<div class="tab-pane fade" id="EditarEliminar" role="tabpanel" aria-labelledby="password-tab">
@@ -217,12 +217,14 @@
 			const Descripcion = document.getElementById("DescripcionModificar")
 			const Precio = document.getElementById("PrecioModificar")
 			const Stock = document.getElementById("StockModificar")
+			const Imagen = document.getElementById("ImagenModificar")
 
 			obj = {
 				"Nombre": Nombre.value,
 				"Descripcion": Descripcion.value,
 				"Precio": Precio.value,
 				"Stock": Stock.value,
+				"Imagen": Imagen.value
 			}
 			put(parseInt(id.value), obj)
 		}
@@ -241,14 +243,14 @@
 					const Descripcion = document.getElementById("DescripcionModificar")
 					const Precio = document.getElementById("PrecioModificar")
 					const Stock = document.getElementById("StockModificar")
+					const Imagen = document.getElementById("ImagenModificar")
 
 					id.value = data.id
 					Nombre.value = data.nombre
 					Descripcion.value = data.descripcion
 					Precio.value = data.precio
 					Stock.value = data.stock
-
-					
+					Imagen.value = data.stock
 
 					id.focus()
 				}
@@ -267,12 +269,14 @@
 					const Descripcion = document.getElementById("DescripcionModificar")
 					const Precio = document.getElementById("PrecioModificar")
 					const Stock = document.getElementById("StockModificar")
+					const Imagen = document.getElementById("ImagenModificar")
 
 					id.value = ""
 					Nombre.value = ""
 					Descripcion.value = ""
 					Precio.value = ""
 					Stock.value = ""
+					Imagen.value = ""
 
 					id.focus()
 				}
@@ -301,12 +305,15 @@
 					const Descripcion = document.getElementById("DescripcionModificar")
 					const Precio = document.getElementById("PrecioModificar")
 					const Stock = document.getElementById("StockModificar")
+					const Imagen = document.getElementById("ImagenModificar")
 
 					id.value = ""
 					Nombre.value = ""
 					Descripcion.value = ""
 					Precio.value = ""
 					Stock.value = ""
+					Imagen.value = ""
+					
 					id.focus()
 				}
 			})
@@ -335,6 +342,7 @@
                 <td>${o.descripcion}</td>
                 <td>${o.precio}</td>
                 <td>${o.stock}</td>
+				<td>${o.Imagen}</td>
 				
 				</tr>`
 
@@ -361,16 +369,37 @@
 					const Descripcion = document.getElementById("DescripcionModificar")
 					const Precio = document.getElementById("PrecioModificar")
 					const Stock = document.getElementById("StockModificar")
+					const Imagen = document.getElementById("ImagenModificar")
 
 					id.value = ""
 					Nombre.value = ""
 					Descripcion.value = ""
 					Precio.value = ""
 					Stock.value = ""
+					Imagen.value = ""
 
 					id.focus()
 
 		}
+
+			function Cancel1(){
+
+					const Imagen = document.getElementById("Imagen")
+					const Nombre = document.getElementById("Nombre")
+					const Descripcion = document.getElementById("Descripcion")
+					const Precio = document.getElementById("Precio")
+					const Stock = document.getElementById("Stock")
+
+					Imagen.value = ""
+					Nombre.value = ""
+					Descripcion.value = ""
+					Precio.value = ""
+					Stock.value = ""
+
+					Nombre.focus()
+
+					}
+
 
 		
 
