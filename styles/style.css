@@ -5,7 +5,7 @@
             box-sizing: border-box;
     -webkit-transition: all .2s linear;
     transition: all .2s linear;
-    text-transform: capitalize;
+    
     font-family: 'Exo 2', sans-serif;
   }
   

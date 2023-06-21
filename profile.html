@@ -13,6 +13,7 @@
 </head>
 
 <body>
+	
 	<section class="profilsection">
 		<div class="containprofil">
 			<h1 class="mb" id="title">Configuración de Perfil</h1>
@@ -30,7 +31,7 @@
 							<i class="fa fa-home text-center mr-1"></i>
 							Información
 						</a>
-						<a class="nav-link" id="password-tab" data-toggle="pill" href="#password" role="tab"
+						<a class="nav-link" id="password-tab" data-toggle="pill" href="#Div-Pass" role="tab"
 							aria-controls="password" aria-selected="false">
 							<i class="fa fa-key text-center mr-1"></i>
 							Seguridad
@@ -52,6 +53,8 @@
 									<input type="text" class="form-control" id="id">
 								</div>
 							</div>
+						</div>
+							<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
 									<label>Nombre</label>
@@ -97,13 +100,13 @@
 							<button class="btn btn-light">Cancelar</button>
 						</div>
 					</div>
-					<div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="password-tab">
+					<div class="tab-pane fade" id="Div-Pass" role="tabpanel" aria-labelledby="password-tab">
 						<h3 class="mb-4">Configuración de Contraseña</h3>
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
 									<label>Contraseña actual</label>
-									<input type="password" class="form-control">
+									<input type="text" id="password" class="form-control">
 								</div>
 							</div>
 						</div>
@@ -156,7 +159,6 @@
 		</div>
 	</section>
 
-
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -200,7 +202,6 @@
 				url: "http://localhost:62020/api/Usuarios/" + id,
 				success: function (data) {
 					console.log(data)
-
 					
 					const Nombre = document.getElementById("name")
 					const Apellido = document.getElementById("lastname")
@@ -209,7 +210,6 @@
 					const Direc = document.getElementById("direc")
 					const Contraseña = document.getElementById("password")
 					const Telefono = document.getElementById("tel")
-
 					
 					Nombre.value = data.Nombre
 					Apellido.value = data.Apellido

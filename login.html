@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="styles/stylelogin.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
     <header id="header" class="headera">
         <div class="logoA"><img src="assets/imagenes/icon.ico" alt=""></div>
@@ -27,6 +28,7 @@
             <a href="index.html">Ofertas</a>
             <a href="index.html">Contacto</a>
             <a href="login.html">Ingresar</a>
+            <a href="profile.html">Editar Perfil</a>
         </nav>
         <div class="left">
 
@@ -43,7 +45,9 @@
             <h2 class="logoA"><img src="assets/imagenes/icon.ico" alt="">Farmacia Medicarlo</h2>
             <div class="Txt-Cont">
                 <h2>Bienvenido!<br><span>Regístrate ya para unirte a nuestro sistema de cobranza</h2>
-                <p>Medicarlo es una farmacia comprometida con el bienestar y la salud de nuestros clientes. Nuestro objetivo es proporcionar medicamentos de calidad, productos de cuidado personal y servicios farmacéuticos confiables, respaldados por un equipo profesional y amigable.</p>
+                <p>Medicarlo es una farmacia comprometida con el bienestar y la salud de nuestros clientes. Nuestro
+                    objetivo es proporcionar medicamentos de calidad, productos de cuidado personal y servicios
+                    farmacéuticos confiables, respaldados por un equipo profesional y amigable.</p>
                 <div class="social-icons">
                     <a href="https://www.facebook.com/profile.php?id=100054649951337"><i
                             class='bx bxl-facebook-square'></i></i></a>
@@ -76,7 +80,7 @@
                 </form>
             </div>
             <div class="form-box register">
-                <form action="#">
+                <form id="form-log" action="#">
                     <h2>Regístrate aquí!</h2>
                     <div class="input-box">
                         <span class="icon"><i class='bx bxs-user-circle'></i></i></span>
@@ -90,7 +94,7 @@
                     </div>
                     <div class="input-box">
                         <span class="icon"><i class='bx bxl-gmail'></i></span>
-                        <input type="email" id="email" required>
+                        <input type="text" id="email" required>
                         <label>E-mail</label>
                     </div>
                     <div class="input-box">
@@ -100,17 +104,18 @@
                     </div>
                     <div class="input-box">
                         <span class="icon"><i class='bx bxs-lock-alt'></i></span>
-                        <input type="password" required>
-                        <label>Confirmar Contraseña</label>
+                        <input type="password" id="confirm-password" required>
+                        <label>Confirmar contraseña</label>
                     </div>
                     <div class="Terms">
-                        <label><input type="checkbox">Estoy de acuerdo con los Términos y Condiciones</label>
+                        <input type="checkbox" id="terms" name="terms" required>Estoy de acuerdo con
+                        los Términos y Condiciones
                     </div>
                     <div class="Terms">
-                        <label><input type="checkbox">Quiero recibir notificaciones de Promociones y/o
-                            <br>Actualizaciones de la empresa</label>
+                        <input type="checkbox" required>Quiero recibir notificaciones de promociones y
+                        <br>actualizaciones de la empresa
                     </div>
-                    <button type="button" class="bttn2" onclick="Guardar()">Crear cuenta</button>
+                    <button type="button" id="submit-btn" class="bttn2" onclick="Guardar()">Crear cuenta</button>
                     <div class="log-register">
                         <p>Ya tienes una cuenta? <a href="#" class="login-register">Sí, la tengo</a></p>
                     </div>
@@ -123,15 +128,56 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         function Guardar() {
-            const nombre = document.getElementById("name")
-            const apellido = document.getElementById("lastname")
-            const correo = document.getElementById("email")
-            const contraseña = document.getElementById("password")
+            const form = document.getElementById("form-log");
+            const terms = document.getElementById("terms");
+            const nombre = document.getElementById("name").value
+            const apellido = document.getElementById("lastname").value
+            const correo = document.getElementById("email").value
+            const contraseña = document.getElementById("password").value.trim();
+            const confirmContra = document.getElementById("confirm-password").value.trim();
+            const emailRegex = /^[a-zA-Z0-9._-]+@(gmail|outlook|otro)\.com$/;
+            if (contraseña !== confirmContra) {
+                alert("Las contraselas no coinciden");
+                const contraseña = document.getElementById("password")
+                const confirmContra = document.getElementById("confirm-password")
+                contraseña.value = ""
+                confirmContra.value = ""
+                return false;
+            }
+            if (nombre === "") {
+                alert("Ingrese su nombre");
+                return false;
+            }
+            if (apellido === "") {
+                alert("Ingrese su apellido");
+                return false;
+            }
+            if (correo === "") {
+                alert("Ingrese su correo");
+
+                form.addEventListener("submit", function(event){
+                    event.preventDefault();
+                    if(!emailRegex.test(email.value)){
+                        alert("Ingerge un correo electrónico válido para completar su registro de forma correcta")
+                        return false;
+                    }
+                });
+
+                return false;
+            }
+            if (contraseña === "") {
+                alert("Ingrese su contraseña");
+                return false;
+            }
+            if (!terms.checked) {
+                alert("Debes aceptar los Términos y Condiciones para continuar");
+                return false;
+            }
             obj = {
-                "Nombre": nombre.value,            
-                "Apellido": apellido.value,
-                "Correo": correo.value,
-                "Contraseña": contraseña.value
+                "Nombre": nombre,
+                "Apellido": apellido,
+                "Correo": correo,
+                "Contraseña": contraseña
             }
             post(obj)
         }
@@ -142,10 +188,24 @@
                 data: obj,
                 url: "http://localhost:62020/api/Usuarios/",
                 success: function (data) {
-                    alert("Proceso Exitos...!!!")
+                    console.log("Proceso Exito...!!!")
+
+                    const nombre = document.getElementById("name")
+                    const apellido = document.getElementById("lastname")
+                    const correo = document.getElementById("email")
+                    const contraseña = document.getElementById("password")
+                    const confirmContra = document.getElementById("confirm-password")
+
+                    nombre.value = ""
+                    apellido.value = ""
+                    correo.value = ""
+                    contraseña.value = ""
+                    confirmContra.value = ""
+                    nombre.focus()
                 }
             })
         }
     </script>
 </body>
+
 </html>
