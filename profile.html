@@ -20,6 +20,7 @@
 </head>
 
 <body>
+	<div class="backgraund"></div>
 	<header id="header" class="headera">
         <div class="logoA"><img src="assets/imagenes/icon.ico" alt=""></div>
         <nav class="barnav">
@@ -42,114 +43,116 @@
     </header>
 	<div class="backgraund"></div>
 	<section class="profilsection">
-		<div class="containprofil">
+		<div class="containprofile">
 			
-			<div class="bg-white shadow rounded-lg d-block d-sm-flex">
-				<div class="profile-tab-nav border-right">
+			<div class="contegen">
+				<div class=" profile-tab-nav">
 					<div class="usercircle">
-						<div class="img-circle text-center mb-3">
-							<i class='bx bxs-user-circle'></i>
+						<div class=" img-circle text-center mb-3">
+							<i class= ' bx bxs-user-circle'></i>
 						</div>
-						<h3 class="titlename">Nombre</h3>
+						<h3 class=" text-center negrita ">Nombre</h3>
 					</div>
-					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-						<a class="nav-link active" id="account-tab" data-toggle="pill" href="#account" role="tab"
+					<div class=" contenavs nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+						<a class="nav-link active negrita microtext" id="account-tab" data-toggle="pill" href="#account" role="tab"
 							aria-controls="account" aria-selected="true">
-							<i class="fa fa-home text-center mr-1"></i>
+							<i class="fa fa-home"></i>
 							Información
 						</a>
-						<a class="nav-link" id="password-tab" data-toggle="pill" href="#Div-Pass" role="tab"
+						<a class="negrita microtext nav-link" id="password-tab" data-toggle="pill" href="#Div-Pass" role="tab"
 							aria-controls="password" aria-selected="false">
-							<i class="fa fa-key text-center mr-1"></i>
+							<i class="fa fa-key"></i>
 							Seguridad
 						</a>
 
 					</div>
+					
 				</div>
-				<div class="tab-content p-4 p-md-5" id="v-pills-tabContent">
-					<div class="tab-pane fade show active" id="account" role="tabpanel" aria-labelledby="account-tab">
-						<h3 class="mb-4">Perfil</h3>
+				<div class="tab-content conteauxiliar" id="v-pills-tabContent">
+					<div  class="contenedorbaja tab-pane fade " class="tab-pane fade show active" id="account" role="tabpanel" aria-labelledby="account-tab">
+						<h2 class="macrotext2 negrita">Perfil</h2>
 						<div class="row">
-							<div class="col-md-6">
+							<div class="col-md-5">
 								<div class="form-group">
-									<label>id</label>
-									<input type="text" class="form-control" id="id">
+									<label class="textaco negrita">ID</label>
+									<input type="text" class="form-control microtext" id="id">
 								</div>
 							</div>
 						</div>
 							<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<label>Nombre</label>
-									<input type="text" class="form-control" id="name">
+									<label class="textaco negrita">Nombre</label>
+									<input type="text" class="form-control microtext" id="name">
+								</div>
+							</div>
+						
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="textaco negrita">Apellido</label>
+									<input type="text" class="form-control microtext" id="lastname">
 								</div>
 							</div>
 							<div class="col-md-6">
-								<div class="form-group">
-									<label>Apellido</label>
-									<input type="text" class="form-control" id="lastname">
+								<div class="form-group negrita">
+									<label class="textaco">Email</label>
+									<input type="text" class="form-control microtext" id="email">
 								</div>
 							</div>
 							<div class="col-md-6">
-								<div class="form-group">
-									<label>Email</label>
-									<input type="text" class="form-control" id="email">
+								<div class="form-group negrita">
+									<label class="textaco">Teléfono</label>
+									<input type="text" class="form-control microtext" id="tel">
 								</div>
 							</div>
 							<div class="col-md-6">
-								<div class="form-group">
-									<label>Teléfono</label>
-									<input type="text" class="form-control" id="tel">
+								<div class="form-group negrita">
+									<label class="textaco">Localidad</label>
+									<input type="text" class="form-control microtext" id="localidad">
 								</div>
 							</div>
 							<div class="col-md-6">
-								<div class="form-group">
-									<label>Localidad</label>
-									<input type="text" class="form-control" id="localidad">
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>Dirección</label>
-									<input type="text" class="form-control" id="direc">
+								<div class="form-group negrita">
+									<label class="textaco">Dirección</label>
+									<input type="text" class="form-control microtext" id="direc">
 								</div>
 							</div>
 							<div class="col-md-12">
 							</div>
 						</div>
 						<div>
-							<button class="btn btn-primary" onclick="Buscar()">Buscar</button>
-							<button class="btn btn-primary" onclick="Modificar()">Modificar</button>
-							<button class="btn btn-light">Cancelar</button>
+							<button class="btn btn-primary microtext" onclick="Buscar()">Buscar</button>
+							<button class="btn btn-primary microtext" onclick="Modificar()">Modificar</button>
+							<button class="btn btn-light microtext">Cancelar</button>
 						</div>
 					</div>
-					<div class="tab-pane fade" id="Div-Pass" role="tabpanel" aria-labelledby="password-tab">
-						<h3 class="mb-4">Configuración de Contraseña</h3>
+					<div class="contenedorbaja tab-pane fade"  id="Div-Pass" role="tabpanel" aria-labelledby="password-tab">
+						<h3 class="mb-4 macrotext2 negrita">Configuración de Contraseña</h3>
 						<div class="row">
 							<div class="col-md-6">
-								<div class="form-group">
+								<div class="form-group textaco negrita">
 									<label>Contraseña actual</label>
-									<input type="text" id="password" class="form-control">
+									<input type="text" id="password" class="form-control microtext">
 								</div>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-md-6">
-								<div class="form-group">
+								<div class="form-group textaco negrita">
 									<label>Nueva Contraseña</label>
-									<input type="password" class="form-control">
+									<input type="password" class="form-control microtext">
 								</div>
 							</div>
 							<div class="col-md-6">
-								<div class="form-group">
-									<label>Comfirmar nueva contraseña</label>
-									<input type="password" class="form-control">
+								<div class="form-group textaco negrita">
+									<label>Confirmar nueva contraseña</label>
+									<input type="password" class="form-control microtext">
 								</div>
 							</div>
 						</div>
 						<div>
-							<button class="btn btn-primary">Cargar</button>
-							<button class="btn btn-light">Cancelar</button>
+							<button class="btn btn-primary microtext">Cargar</button>
+							<button class="btn btn-light microtext">Cancelar</button>
 						</div>
 					</div>
 					
