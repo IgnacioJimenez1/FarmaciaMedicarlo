@@ -123,7 +123,7 @@
 						<div>
 							<button class="btn btn-primary microtext" onclick="Buscar()">Buscar</button>
 							<button class="btn btn-primary microtext" onclick="Modificar()">Modificar</button>
-							<button class="btn btn-light microtext">Cancelar</button>
+							<button class="btn btn-light microtext" onclick="Cancel()">Cancelar</button>
 						</div>
 					</div>
 					<div class="contenedorbaja tab-pane fade"  id="Div-Pass" role="tabpanel" aria-labelledby="password-tab">
@@ -196,6 +196,8 @@
 				"Contraseña": Contraseña.value
 			}
 			put(parseInt(id.value), obj)
+
+
 		}
 		function get(id) {
 			$.ajax({
@@ -232,9 +234,55 @@
 				data: obj,
 				url: "http://localhost:62020/api/Usuarios/" + id,
 				success: function (data) {
-					alert("Proceso Exitos...!!!")
+					
+					console.log("Se realizaron los cambios")
+
+					const id = document.getElementById("id")
+					const Nombre = document.getElementById("name")
+					const Apellido = document.getElementById("lastname")
+					const Correo = document.getElementById("email")
+					const Localidad = document.getElementById("localidad")
+					const Direc = document.getElementById("direc")
+					const Contraseña = document.getElementById("password")
+					const Telefono = document.getElementById("tel")
+
+					id.value = ""
+					Nombre.value = ""
+					Apellido.value = ""
+					Correo.value = ""
+					Localidad.value = ""
+					Direc.value = ""
+					Contraseña.value = ""
+					Telefono.value = ""
+
+					id.focus()
 				}
 			})
+		}
+
+
+		function Cancel() {
+
+			const id = document.getElementById("id")
+			const Nombre = document.getElementById("name")
+			const Apellido = document.getElementById("lastname")
+			const Correo = document.getElementById("email")
+			const Localidad = document.getElementById("localidad")
+			const Direc = document.getElementById("direc")
+			const Contraseña = document.getElementById("password")
+			const Telefono = document.getElementById("tel")
+
+			id.value = ""
+			Nombre.value = ""
+			Apellido.value = ""
+			Correo.value = ""
+			Localidad.value = ""
+			Direc.value = ""
+			Contraseña.value = ""
+			Telefono.value = ""
+
+			id.focus()
+
 		}
 	</script>
 
