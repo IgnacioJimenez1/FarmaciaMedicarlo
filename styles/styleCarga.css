@@ -1,10 +1,34 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
 
 body {
-	background: #1a1a1a;
+	background-color: #0f8a2a9d;
 	font-family: "Roboto", sans-serif;
 }
+.background3{
+	background-color: #0f8a2a9d;
+}
 
+.footer{
+background-color: #0f8a2a9d;
+}
+.backgraund2{
+    width: 100%;
+    height: 100vh;
+    background: url(../assets/imagenes/laboratorio.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    position:absolute;
+}
+
+.input{
+	width: 100%;
+}
+
+
+.inputid{
+	width: 70%;
+	position: center;
+}
 .shadow {
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
 }
@@ -60,13 +84,14 @@ body {
 .containprofil {
 	padding-left: 170px;
 	padding-right: 170px;
+	background-color: #0f8a2a9d;
 }
 
 .contegen2 {
 	position: absolute;
-	background-color: white;
+	background-color: #0f8a2a9d;
 	border-radius: 40px;
-	width: 1500px;
+	width: 80%;
 	height: 800px;
 	background: rgba(11, 130, 60, 0.4);
 }
@@ -78,14 +103,14 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-color: aquamarine;
-	border-style: dashed;
+	background-color: #0f8a2a9d;
 }
 
 .contenedorgeneralauxiliar {
-	padding-left: 175px;
+	padding-left: 130px;
 	padding-top: 20px;
-
+	position: center;
+	color: white;
 
 }
 
@@ -109,10 +134,10 @@ body {
 	height: 45px;
 	padding: 8px;
 	border-radius: 5px;
-	border: 2.5px solid #E0E1E4;
+	border: 2.5px solid #0f8a2a9d;
 	box-shadow: 0px 0px 20px -20px;
 	cursor: pointer;
-	background-color: white;
+	background-color: #0f8a2a9d;
 	transition: all 0.2s ease-in-out 0ms;
 	user-select: none;
 	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -120,7 +145,7 @@ body {
 }
 
 button:hover {
-	background-color: #F2F2F2;
+	background-color: #0f8a2a9d;
 	box-shadow: 0px 0px 20px -18px;
 }
 

@@ -36,7 +36,7 @@
 	<link rel="stylesheet" href="styles/owl.theme.green.min.css">
 </head>
 
-<body>
+<body class="backgraund3">
 	<header id="header" class="headera">
 		<div class="logoA"><img src="assets/imagenes/icon.ico" alt=""></div>
 		<nav class="barnav">
@@ -57,7 +57,7 @@
 
 		<!-- barra de navegación  -->
 	</header>
-	<div class="backgraund"></div>
+	<div class="backgraund2">
 	<section class="py-5 my-5">
 		<div class="contenedorgeneralauxiliar">
 			<h1 class="mb-5">Configuracion de Productos</h1>
@@ -65,12 +65,12 @@
 				<div class="profile-tab-nav border-right ">
 					<div class="nav flex-column nav-pills negrita" id="v-pills-tab" role="tablist"
 						aria-orientation="vertical">
-						<a class="nav-link active negrita fontsize" id="account-tab" data-toggle="pill" href="#Agregar"
+						<a class="nav-link active negrita fontsize " id="account-tab" data-toggle="pill" href="#Agregar"
 							role="tab" aria-controls="account" aria-selected="true">
 							<i class="fa fa-home text-center mr-1 "></i>
 							Agregar
 						</a>
-						<a class="nav-link negrita fontsize" id="password-tab" data-toggle="pill" href="#EditarEliminar"
+						<a class="nav-link negrita fontsize microtext ¡" id="password-tab" data-toggle="pill" href="#EditarEliminar"
 							role="tab" aria-controls="password" aria-selected="false">
 							<i class="fa fa-key text-center mr-1"></i>
 							Editar/Eliminar
@@ -83,7 +83,7 @@
 					</div>
 				</div>
 				<div class="tab-content p-4 p-md-5" id="v-pills-tabContent">
-					<div class="tab-pane fade show active" id="Agregar" role="tabpanel" aria-labelledby="account-tab">
+					<div class="tab-pane fade show active " id="Agregar" role="tabpanel" aria-labelledby="account-tab">
 						<br><br><br>
 						<h3 class="mb-4 textaco negrita fontsize">Agregar Productos</h3>
 						<hr>
@@ -91,31 +91,37 @@
 							<div class="col-md-6">
 								<div class="form-group">
 									<label class="textaco">Foto del Producto</label>
+									<br>
 									<input class="button" type="file" accept=".png, .jpg" id="Imagen">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 									<label class="textaco">Nombre</label>
-									<input type="text" class="button form-control" id="Nombre">
+									<br>
+									<input type="text" class="button form-control inputid" id="Nombre">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 									<label class="textaco">Stock</label>
-									<input type="number" class=" negrita form-control" id="Stock">
+									<br>
+									<input type="number" class=" negrita form-control inputid" id="Stock">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
 									<label class="textaco">Precio</label>
-									<input type="number" class=" negrita form-control" id="Precio">
+									<br>
+								
+									<input type="number" class=" negrita form-control inputid" id="Precio">
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
 									<label class="textaco">Descripcion</label>
-									<textarea class="form-control" rows="4" id="Descripcion"></textarea>
+									<br>
+									<textarea class="form-control inputid" rows="4" id="Descripcion"></textarea>
 								</div>
 							</div>
 						</div>
@@ -132,13 +138,13 @@
 						<div class="col-md-6">
 							<div class="form-group">
 								<label class="textaco">Foto del Producto</label>
-								<input type="file" accept=".png, .jpg" id="ImagenModificar">
+								<input class="inputid" type="file" accept=".png, .jpg" id="ImagenModificar">
 							</div>
 						</div>
 						<div class="col-md-6 ">
 							<div class="form-group">
 								<label class="textaco">Id del Producto</label>
-								<input type="text" class="form-control" id="id">
+								<input class="inputid" type="text" class="form-control" id="id">
 							</div>
 							<hr>
 						</div>
@@ -146,19 +152,19 @@
 						<div class="col-md-6">
 							<div class="form-group">
 								<label class="textaco">Nombre</label>
-								<input type="text" class="form-control" id="NombreModificar">
+								<input class="inputid" type="text" class="form-control" id="NombreModificar">
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
 								<label class="textaco">Stock</label>
-								<input type="text" class="form-control" id="StockModificar">
+								<input class="inputid" type="text" class="form-control" id="StockModificar">
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
 								<label class="textaco">Precio</label>
-								<input type="text" class="form-control" id="PrecioModificar">
+								<input class="inputid" type="text" class="form-control" id="PrecioModificar">
 							</div>
 						</div>
 						<div>
@@ -481,7 +487,7 @@
 
 
 	</script>
-
+</div>
 </body>
 
 </html>
