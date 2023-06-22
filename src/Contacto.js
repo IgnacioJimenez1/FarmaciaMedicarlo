@@ -1,4 +1,5 @@
-function Guardar() {
+
+  function Guardar() {
     const Nombre = document.getElementById("nombre")
     const Email = document.getElementById("email")
     const Telefono = document.getElementById("telefono")
@@ -7,7 +8,7 @@ function Guardar() {
     obj = {
         "Nombre": Nombre.value,            
         "Email": Email.value,
-        "Tel": Telefono.value,
+        "Telefono": Telefono.value,
         "Mensaje": Mensaje.value
     }
     post(obj)
