@@ -189,6 +189,7 @@
 
 							<table>
 								<thead>
+									<th class="microtext">ID</th>
 									<th class="microtext">Nombre</th>
 									<th class="microtext">Descripcion</th>
 									<th class="microtext">Precio</th>
@@ -247,24 +248,24 @@
 				data: obj,
 				url: "http://localhost:62020/api/Productos",
 				success: function (data) {
-				
+
 					console.log("Proceso Exitos...!!!")
 					const Nombre = document.getElementById("Nombre")
-                    const Descripcion = document.getElementById("Descripcion")
-                    const Precio = document.getElementById("Precio")
-                    const Stock = document.getElementById("Stock")
-                    const Imagen = document.getElementById("Imagen")
+					const Descripcion = document.getElementById("Descripcion")
+					const Precio = document.getElementById("Precio")
+					const Stock = document.getElementById("Stock")
+					const Imagen = document.getElementById("Imagen")
 
-                    Nombre.value = ""
-                    Descripcion.value = ""
-                    Precio.value = ""
-                    Stock.value = ""
-                    Imagen.value = ""
-                    Nombre.focus()
+					Nombre.value = ""
+					Descripcion.value = ""
+					Precio.value = ""
+					Stock.value = ""
+					Imagen.value = ""
+					Nombre.focus()
 
 				}
 
-				
+
 
 			})
 		}
@@ -404,13 +405,16 @@
 
 					const tbody = document.querySelector("tbody");
 
+					tbody.innerHTML = "";
+					
+
 					data.forEach(o => {
 						let _tr = `<tr>
+				<td>${o.id}</td>
                 <td>${o.nombre}</td>
                 <td>${o.descripcion}</td>
                 <td>${o.precio}</td>
                 <td>${o.stock}</td>
-				<td>${o.Imagen}</td>
 				
 				</tr>`
 
@@ -468,7 +472,11 @@
 
 		}
 
+		function Actualizar() {
 
+			Get()
+
+		}
 
 
 
