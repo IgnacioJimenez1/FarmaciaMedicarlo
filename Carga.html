@@ -11,27 +11,72 @@
 	<link rel="stylesheet" type="text/css" href="styles/styleProfile.css">
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 	<link rel="stylesheet" href="styles/styleCarga.css">
+	<link rel="shortcut icon" href="assets/imagenes/icon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap">
+	<link rel="stylesheet" href="styles/bootstrap.min.css">
+	<link rel="stylesheet" href="styles/owl.carousel.min.css">
+	<link rel="stylesheet" href="styles/owl.theme.green.min.css">
+	<link rel="stylesheet" href="styles/stylelogin.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+	<!-- custom css file link -->
+	<link rel="stylesheet" href="styles/style.css">
+
+	<!-- font awesome cdn link -->
+
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap">
+	<link rel="stylesheet" href="styles/bootstrap.min.css">
+	<link rel="stylesheet" href="styles/owl.carousel.min.css">
+	<link rel="stylesheet" href="styles/owl.theme.green.min.css">
 </head>
 
 <body>
+	<header id="header" class="headera">
+		<div class="logoA"><img src="assets/imagenes/icon.ico" alt=""></div>
+		<nav class="barnav">
+			<a href="index.html">Inicio</a>
+			<a href="index.html">Produtos</a>
+			<a href="index.html">Testimonios</a>
+			<a href="index.html">Ofertas</a>
+			<a href="index.html">Contacto</a>
+			<a href="login.html">Ingresar</a>
+		</nav>
+		<div class="left">
+
+			<div class="search-container">
+				<label for="search" class="fas fa-search"></label>
+				<input type="search" id="search" placeholder="Buscar">
+			</div>
+		</div>
+
+		<!-- barra de navegación  -->
+	</header>
+	<div class="backgraund"></div>
 	<section class="py-5 my-5">
-		<div class="container">
+		<div class="contenedorgeneralauxiliar">
 			<h1 class="mb-5">Configuracion de Productos</h1>
-			<div class="bg-white shadow rounded-lg d-block d-sm-flex">
-				<div class="profile-tab-nav border-right">
-					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-						<a class="nav-link active" id="account-tab" data-toggle="pill" href="#Agregar" role="tab"
-							aria-controls="account" aria-selected="true">
-							<i class="fa fa-home text-center mr-1"></i>
+			<div class="contegen2">
+				<div class="profile-tab-nav border-right ">
+					<div class="nav flex-column nav-pills negrita" id="v-pills-tab" role="tablist"
+						aria-orientation="vertical">
+						<a class="nav-link active negrita fontsize" id="account-tab" data-toggle="pill" href="#Agregar"
+							role="tab" aria-controls="account" aria-selected="true">
+							<i class="fa fa-home text-center mr-1 "></i>
 							Agregar
 						</a>
-						<a class="nav-link" id="password-tab" data-toggle="pill" href="#EditarEliminar" role="tab"
-							aria-controls="password" aria-selected="false">
+						<a class="nav-link negrita fontsize" id="password-tab" data-toggle="pill" href="#EditarEliminar"
+							role="tab" aria-controls="password" aria-selected="false">
 							<i class="fa fa-key text-center mr-1"></i>
 							Editar/Eliminar
 						</a>
-						<a class="nav-link" id="security-tab" data-toggle="pill" href="#ListaProductos" role="tab"
-							aria-controls="security" aria-selected="false">
+						<a class="nav-link negrita fontsize" id="security-tab" data-toggle="pill" href="#ListaProductos"
+							role="tab" aria-controls="security" aria-selected="false">
 							<i class="fa fa-user text-center mr-1"></i>
 							Lista de Productos
 						</a>
@@ -39,36 +84,37 @@
 				</div>
 				<div class="tab-content p-4 p-md-5" id="v-pills-tabContent">
 					<div class="tab-pane fade show active" id="Agregar" role="tabpanel" aria-labelledby="account-tab">
-						<h3 class="mb-4">Agregar Productos</h3>
+						<br><br><br>
+						<h3 class="mb-4 textaco negrita fontsize">Agregar Productos</h3>
 						<hr>
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<label>Foto del Producto</label>
-									<input type="file" accept=".png, .jpg" id="Imagen">
+									<label class="textaco">Foto del Producto</label>
+									<input class="button" type="file" accept=".png, .jpg" id="Imagen">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<label>Nombre</label>
-									<input type="text" class="form-control" id="Nombre">
+									<label class="textaco">Nombre</label>
+									<input type="text" class="button form-control" id="Nombre">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<label>Stock</label>
-									<input type="number" class="form-control" id="Stock">
+									<label class="textaco">Stock</label>
+									<input type="number" class=" negrita form-control" id="Stock">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<label>Precio</label>
-									<input type="number" class="form-control" id="Precio">
+									<label class="textaco">Precio</label>
+									<input type="number" class=" negrita form-control" id="Precio">
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<label>Descripcion</label>
+									<label class="textaco">Descripcion</label>
 									<textarea class="form-control" rows="4" id="Descripcion"></textarea>
 								</div>
 							</div>
@@ -76,73 +122,77 @@
 						<hr>
 						<div>
 							<button class="btn btn-primary" onclick="Agregar()">Agregar</button>
-							<button class="btn btn-light"   onclick="Cancel1()">Cancelar</button>
+							<button class="btn btn-light" onclick="Cancel1()">Cancelar</button>
 						</div>
 					</div>
 					<div class="tab-pane fade" id="EditarEliminar" role="tabpanel" aria-labelledby="password-tab">
-						<h3 class="mb-4">Edición de Productos</h3>
+						<br><br><br>
+						<h3 class="mb-4 textaco negrita fontsize">Edición de Productos</h3>
+
 						<div class="col-md-6">
 							<div class="form-group">
-								<label>Id del Producto</label>
+								<label class="textaco">Foto del Producto</label>
+								<input type="file" accept=".png, .jpg" id="ImagenModificar">
+							</div>
+						</div>
+						<div class="col-md-6 ">
+							<div class="form-group">
+								<label class="textaco">Id del Producto</label>
 								<input type="text" class="form-control" id="id">
 							</div>
 							<hr>
 						</div>
-						<div class="row">
-							<div class="col-md-6">
+						<div class="row"></div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="textaco">Nombre</label>
+								<input type="text" class="form-control" id="NombreModificar">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="textaco">Stock</label>
+								<input type="text" class="form-control" id="StockModificar">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="textaco">Precio</label>
+								<input type="text" class="form-control" id="PrecioModificar">
+							</div>
+						</div>
+						<div>
+							<div class="col-md-12">
 								<div class="form-group">
-									<label>Foto del Producto</label>
-									<input type="file" accept=".png, .jpg" id="ImagenModificar">
+									<label class="textaco">Descripcion</label>
+									<textarea class="form-control" rows="4" id="DescripcionModificar"></textarea>
 								</div>
 							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>Nombre</label>
-									<input type="text" class="form-control" id="NombreModificar">
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>Stock</label>
-									<input type="text" class="form-control" id="StockModificar">
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>Precio</label>
-									<input type="text" class="form-control" id="PrecioModificar">
-								</div>
-							</div>
+							<hr>
 							<div>
-								<div class="col-md-12">
-									<div class="form-group">
-										<label>Descripcion</label>
-										<textarea class="form-control" rows="4" id="DescripcionModificar"></textarea>
-									</div>
-								</div>
-								<hr>
-								<div>
-									<button class="btn btn-primary" onclick="Buscar()">Buscar Producto</button>
-									<button class="btn btn-primary" onclick="Modificar()">Modificar</button>
-									<button class="btn btn-primary" onclick="Eliminar()">Eliminar</button>
-									<button class="btn btn-light"   onclick="Cancel()">Cancelar</button>
-									
-								</div>
+								<button class="btn btn-primary" onclick="Buscar()">Buscar Producto</button>
+								<button class="btn btn-primary" onclick="Modificar()">Modificar</button>
+								<button class="btn btn-primary" onclick="Eliminar()">Eliminar</button>
+								<button class="btn btn-light" onclick="Cancel()">Cancelar</button>
+
 							</div>
 						</div>
 					</div>
 
+
 					<div class="tab-pane fade" id="ListaProductos" role="tabpanel" aria-labelledby="security-tab">
-						<h3 class="mb-4">Listado de Productos</h3> <hr>
+						<br><br><br>
+						<h3 class="mb-4 textaco negrita fontsize">Listado de Productos</h3>
+						<hr>
 						<div class="row">
 
-							
+
 							<table>
 								<thead>
-									<th>Nombre</th>
-									<th>Descripcion</th>
-									<th>Precio</th>
-									<th>Stock</th>
+									<th class="microtext">Nombre</th>
+									<th class="microtext">Descripcion</th>
+									<th class="microtext">Precio</th>
+									<th class="microtext">Stock</th>
 								</thead>
 
 								<tbody>
@@ -151,21 +201,22 @@
 								</tbody>
 							</table>
 
-							
+
 						</div>
 						<hr>
 						<div>
 							<button class="btn btn-primary" onclick="Actualizar()">Actualizar</button>
 						</div>
 					</div>
-
-					
 				</div>
+
+
 			</div>
 		</div>
 		</div>
+		</div>
 
-		
+
 	</section>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -313,7 +364,7 @@
 					Precio.value = ""
 					Stock.value = ""
 					Imagen.value = ""
-					
+
 					id.focus()
 				}
 			})
@@ -362,46 +413,46 @@
 
 		}
 
-		function Cancel(){
+		function Cancel() {
 
-					const id = document.getElementById("id")
-					const Nombre = document.getElementById("NombreModificar")
-					const Descripcion = document.getElementById("DescripcionModificar")
-					const Precio = document.getElementById("PrecioModificar")
-					const Stock = document.getElementById("StockModificar")
-					const Imagen = document.getElementById("ImagenModificar")
+			const id = document.getElementById("id")
+			const Nombre = document.getElementById("NombreModificar")
+			const Descripcion = document.getElementById("DescripcionModificar")
+			const Precio = document.getElementById("PrecioModificar")
+			const Stock = document.getElementById("StockModificar")
+			const Imagen = document.getElementById("ImagenModificar")
 
-					id.value = ""
-					Nombre.value = ""
-					Descripcion.value = ""
-					Precio.value = ""
-					Stock.value = ""
-					Imagen.value = ""
+			id.value = ""
+			Nombre.value = ""
+			Descripcion.value = ""
+			Precio.value = ""
+			Stock.value = ""
+			Imagen.value = ""
 
-					id.focus()
+			id.focus()
 
 		}
 
-			function Cancel1(){
+		function Cancel1() {
 
-					const Imagen = document.getElementById("Imagen")
-					const Nombre = document.getElementById("Nombre")
-					const Descripcion = document.getElementById("Descripcion")
-					const Precio = document.getElementById("Precio")
-					const Stock = document.getElementById("Stock")
+			const Imagen = document.getElementById("Imagen")
+			const Nombre = document.getElementById("Nombre")
+			const Descripcion = document.getElementById("Descripcion")
+			const Precio = document.getElementById("Precio")
+			const Stock = document.getElementById("Stock")
 
-					Imagen.value = ""
-					Nombre.value = ""
-					Descripcion.value = ""
-					Precio.value = ""
-					Stock.value = ""
+			Imagen.value = ""
+			Nombre.value = ""
+			Descripcion.value = ""
+			Precio.value = ""
+			Stock.value = ""
 
-					Nombre.focus()
+			Nombre.focus()
 
-					}
+		}
 
 
-		
+
 
 
 	</script>
