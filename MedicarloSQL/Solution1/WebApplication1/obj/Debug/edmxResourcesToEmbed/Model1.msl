@@ -5,7 +5,7 @@
       <EntityTypeMapping TypeName="TestModel.Contacto">
         <MappingFragment StoreEntitySet="Contacto">
           <ScalarProperty Name="mensaje" ColumnName="mensaje" />
-          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
           <ScalarProperty Name="email" ColumnName="email" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
           <ScalarProperty Name="id" ColumnName="id" />
@@ -34,7 +34,6 @@
     <EntitySetMapping Name="Productos">
       <EntityTypeMapping TypeName="TestModel.Productos">
         <MappingFragment StoreEntitySet="Productos">
-          <ScalarProperty Name="imagen" ColumnName="imagen" />
           <ScalarProperty Name="stock" ColumnName="stock" />
           <ScalarProperty Name="precio" ColumnName="precio" />
           <ScalarProperty Name="descripcion" ColumnName="descripcion" />

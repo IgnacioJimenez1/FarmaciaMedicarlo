@@ -5,16 +5,16 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="email" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="telefono" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="mensaje" Type="varchar(max)" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="tel" Type="nvarchar" MaxLength="50" />
+    <Property Name="mensaje" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Laboratorios">
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nombre" Type="varchar" MaxLength="50" />
     <Property Name="direccion" Type="varchar" MaxLength="100" />
     <Property Name="telefono" Type="varchar" MaxLength="20" />
@@ -23,7 +23,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nombre" Type="varchar" MaxLength="50" />
     <Property Name="Obra" Type="varchar" MaxLength="50" />
   </EntityType>
@@ -36,13 +36,12 @@
     <Property Name="descripcion" Type="varchar" MaxLength="200" />
     <Property Name="precio" Type="decimal" Precision="10" Scale="2" />
     <Property Name="stock" Type="int" />
-    <Property Name="imagen" Type="image" />
   </EntityType>
   <EntityType Name="Rol">
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="descripcion" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Usuarios">

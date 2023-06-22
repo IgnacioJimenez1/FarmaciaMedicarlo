@@ -19,6 +19,5 @@ namespace WebApplication1
         public string descripcion { get; set; }
         public Nullable<decimal> precio { get; set; }
         public Nullable<int> stock { get; set; }
-        public byte[] imagen { get; set; }
     }
 }
