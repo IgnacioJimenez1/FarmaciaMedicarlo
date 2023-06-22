@@ -1509,7 +1509,7 @@
         <a href="#product">Produtos</a>
         <a href="#review">Testimonios</a>
         <a href="#offer">Ofertas</a>
-        <a href="#Contacto">Boletin Informativo</a>
+        <a href="#Contacto">Contacto</a>
 
       </div>
     </div>
@@ -1550,8 +1550,7 @@
 
   <script src="src/EstructuradeDatos.js"></script>
 
-  <script src="src/Contacto.js"></script>
-
+  
 <script>
   function Guardar() {
     const Nombre = document.getElementById("nombre")
@@ -1562,7 +1561,7 @@
     obj = {
         "Nombre": Nombre.value,            
         "Email": Email.value,
-        "Tel": Telefono.value,
+        "Telefono": Telefono.value,
         "Mensaje": Mensaje.value
     }
     post(obj)
@@ -1574,10 +1573,11 @@ function post(obj) {
         data: obj,
         url: "http://localhost:62020/api/Main/",
         success: function (data) {
-            alert("Proceso Exitos...!!!")
+            
         }
     })
 }
+
 </script>
 </body>
 </html>
