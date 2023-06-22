@@ -1,246 +1,253 @@
-	<!DOCTYPE html>
-	<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-	<head>
-		<meta charset="UTF-8">
-		<title>Configuración de Perfil</title>
-		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-		<link rel="stylesheet" href="styles/style.css">
-		<link rel="shortcut icon" href="assets/imagenes/icon.ico" type="image/x-icon">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap">
-		<link rel="stylesheet" href="styles/bootstrap.min.css">
-		<link rel="stylesheet" href="styles/owl.carousel.min.css">
-		<link rel="stylesheet" href="styles/owl.theme.green.min.css">
-		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="styles/styleProfile.css">
-		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-	</head>
+<head>
+	<meta charset="UTF-8">
+	<title>Configuración de Perfil</title>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="assets/imagenes/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/owl.carousel.min.css">
+    <link rel="stylesheet" href="styles/owl.theme.green.min.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/styleProfile.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
 
-	<body>
-		<div class="backgraund"></div>
-		<header id="header" class="headera">
-			<div class="logoA"><img src="assets/imagenes/icon.ico" alt=""></div>
-			<nav class="barnav">
-				<a href="index.html">Inicio</a>
-				<a href="index.html">Produtos</a>
-				<a href="index.html">Testimonios</a>
-				<a href="index.html">Ofertas</a>
-				<a href="index.html">Contacto</a>
-				<a href="login.html">Ingresar</a>
-				<a href="profile.html">Editar Perfil</a>
-			</nav>
-			<div class="left">
+<body>
+	<div class="backgraund"></div>
+	<header id="header" class="headera">
+        <div class="logoA"><img src="assets/imagenes/icon.ico" alt=""></div>
+        <nav class="barnav">
+            <a href="index.html">Inicio</a>
+            <a href="index.html">Produtos</a>
+            <a href="index.html">Testimonios</a>
+            <a href="index.html">Ofertas</a>
+            <a href="index.html">Contacto</a>
+            <a href="login.html">Ingresar</a>
+            <a href="profile.html">Editar Perfil</a>
+        </nav>
+        <div class="left">
 
-				<div class="search-container">
-					<label for="search" class="fas fa-search"></label>
-					<input type="search" id="search" placeholder="Buscar">
+            <div class="search-container">
+                <label for="search" class="fas fa-search"></label>
+                <input type="search" id="search" placeholder="Buscar">
+            </div>
+        </div>
+        <!-- barra de navegación  -->
+    </header>
+	<div class="backgraund"></div>
+	<section class="profilsection">
+		<div class="containprofile">
+			
+			<div class="contegen">
+				<div class=" profile-tab-nav">
+					<div class="usercircle">
+						<div class=" img-circle text-center mb-3">
+							<i class= ' bx bxs-user-circle'></i>
+						</div>
+						<h3 class=" text-center negrita ">Nombre</h3>
+					</div>
+					<div class=" contenavs nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+						<a class="nav-link active negrita microtext" id="account-tab" data-toggle="pill" href="#account" role="tab"
+							aria-controls="account" aria-selected="true">
+							<i class="fa fa-home"></i>
+							Información
+						</a>
+						<a class="negrita microtext nav-link" id="password-tab" data-toggle="pill" href="#Div-Pass" role="tab"
+							aria-controls="password" aria-selected="false">
+							<i class="fa fa-key"></i>
+							Seguridad
+						</a>
+
+					</div>
+					
+				</div>
+				<div class="tab-content conteauxiliar" id="v-pills-tabContent">
+					<div  class="contenedorbaja tab-pane fade show active " class="tab-pane fade show active" id="account" role="tabpanel" aria-labelledby="account-tab">
+						<h2 class="macrotext2 negrita">Perfil</h2>
+						<div class="row">
+							<div class="col-md-5">
+								<div class="form-group">
+									<label class="textaco negrita">ID</label>
+									<br>
+									<input type="text" class="microtext inputid" id="id">
+								</div>
+							</div>
+						</div>
+							<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="textaco negrita">Nombre</label>
+									<br>
+									<input type="text" class="microtext inputid" id="name">
+								</div>
+							</div>
+						
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="textaco negrita">Apellido</label>
+									<br>
+									<input type="text" class="microtext inputid" id="lastname">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group negrita">
+									<label class="textaco">Email</label>
+									<br>
+									<input type="text" class="microtext inputid" id="email">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group negrita">
+									<label class="textaco">Teléfono</label>
+									<br>
+									<input type="text" class="microtext inputid" id="tel">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group negrita">
+									<label class="textaco">Localidad</label>
+									<br>
+									<input type="text" class=" microtext inputid" id="localidad">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group negrita">
+									<label class="textaco">Dirección</label>
+									<br>
+									<input type="text" class=" microtext inputid" id="direc">
+								</div>
+							</div>
+							<div class="col-md-12">
+							</div>
+						</div>
+						<div>
+							<button class="btn btn-primary microtext" onclick="Buscar()">Buscar</button>
+							<button class="btn btn-primary microtext" onclick="Modificar()">Modificar</button>
+							<button class="btn btn-light microtext">Cancelar</button>
+						</div>
+					</div>
+					<div class="contenedorbaja tab-pane fade"  id="Div-Pass" role="tabpanel" aria-labelledby="password-tab">
+						<h3 class="mb-4 macrotext2 negrita">Configuración de Contraseña</h3>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group textaco negrita">
+									<label>Contraseña actual</label>
+										<br>
+									<input type="text" id="password" class="inputid microtext">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group textaco negrita">
+									<label>Nueva Contraseña</label>
+										<br>
+									<input type="password" class="inputid microtext">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group textaco negrita">
+									<label>Confirmar nueva contraseña</label>
+										<br>
+									<input type="password" class="inputid microtext">
+								</div>
+							</div>
+						</div> 	
+						<div>
+							<button class="btn btn-primary microtext">Cargar</button>
+							<button class="btn btn-light microtext">Cancelar</button>
+						</div>
+					</div>
+					
 				</div>
 			</div>
-			<!-- barra de navegación  -->
-		</header>
-		<div class="backgraund"></div>
-		<section class="profilsection">
-			<div class="containprofile">
-				
-				<div class="contegen Megacontenedor">
-					<div class=" profile-tab-nav">
-						<div class="usercircle">
-							<div class=" img-circle text-center mb-3">
-								<i class= ' bx bxs-user-circle'></i>
-							</div>
-							<h3 class=" text-center negrita ">Nombre</h3>
-						</div>
-						<div class=" contenavs nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-							<a class="nav-link active negrita microtext" id="account-tab" data-toggle="pill" href="#account" role="tab"
-								aria-controls="account" aria-selected="true">
-								<i class="fa fa-home"></i>
-								Información
-							</a>
-							<a class="negrita microtext nav-link" id="password-tab" data-toggle="pill" href="#Div-Pass" role="tab"
-								aria-controls="password" aria-selected="false">
-								<i class="fa fa-key"></i>
-								Seguridad
-							</a>
+		</div>
+	</section>
 
-						</div>
-						
-					</div>
-					<div class="tab-content conteauxiliar" id="v-pills-tabContent">
-						<div  class="contenedorbaja tab-pane fade " class="tab-pane fade show active" id="account" role="tabpanel" aria-labelledby="account-tab">
-							<h2 class="macrotext2 negrita">Perfil</h2>
-							<div class="row">
-								<div class="col-md-5">
-									<div class="form-group">
-										<label class="textaco negrita">ID</label>
-										<input type="text" class="form-control microtext" id="id">
-									</div>
-								</div>
-							</div>
-								<div class="row">
-								<div class="col-md-6">
-									<div class="form-group">
-										<label class="textaco negrita">Nombre</label>
-										<input type="text" class="form-control microtext" id="name">
-									</div>
-								</div>
-							
-								<div class="col-md-6">
-									<div class="form-group">
-										<label class="textaco negrita">Apellido</label>
-										<input type="text" class="form-control microtext" id="lastname">
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group negrita">
-										<label class="textaco">Email</label>
-										<input type="text" class="form-control microtext" id="email">
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group negrita">
-										<label class="textaco">Teléfono</label>
-										<input type="text" class="form-control microtext" id="tel">
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group negrita">
-										<label class="textaco">Localidad</label>
-										<input type="text" class="form-control microtext" id="localidad">
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group negrita">
-										<label class="textaco">Dirección</label>
-										<input type="text" class="form-control microtext" id="direc">
-									</div>
-								</div>
-								<div class="col-md-12">
-								</div>
-							</div>
-							<div>
-								<button class="btn btn-primary microtext" onclick="Buscar()">Buscar</button>
-								<button class="btn btn-primary microtext" onclick="Modificar()">Modificar</button>
-								<button class="btn btn-light microtext">Cancelar</button>
-							</div>
-						</div>
-						<div class="contenedorbaja tab-pane fade"  id="Div-Pass" role="tabpanel" aria-labelledby="password-tab">
-							<h3 class="mb-4 macrotext2 negrita">Configuración de Contraseña</h3>
-							<div class="row">
-								<div class="col-md-6">
-									<div class="form-group textaco negrita">
-										<label>Contraseña actual</label>
-										<input type="text" id="password" class="form-control microtext">
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-6">
-									<div class="form-group textaco negrita">
-										<label>Nueva Contraseña</label>
-										<input type="password" class="form-control microtext">
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-6">
-									<div class="form-group textaco negrita">
-										<label>Confirmar nueva contraseña</label>
-										<input type="password" class="form-control microtext">
-									</div>
-								</div>
-							</div>
-							<div class="row">
-							<div>
-								<button class="btn btn-primary microtext">Cargar</button>
-								<button class="btn btn-light microtext">Cancelar</button>
-							</div>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 
-		<script>
+	<script>
 
-			function Buscar() {
-				const id = document.getElementById("id")
+		function Buscar() {
+			const id = document.getElementById("id")
 
-				get(parseInt(id.value))
+			get(parseInt(id.value))
 
-				console.log(id)
+			console.log(id)
+		}
+		function Modificar() {
+			const id = document.getElementById("id")
+			const Nombre = document.getElementById("name")
+			const Apellido = document.getElementById("lastname")
+			const Correo = document.getElementById("email")
+			const Localidad = document.getElementById("localidad")
+			const Direc = document.getElementById("direc")
+			const Contraseña = document.getElementById("password")
+			const Telefono = document.getElementById("tel")
+
+			obj = {
+				"Nombre": Nombre.value,
+				"Apellido": Apellido.value,
+				"Correo": Correo.value,
+				"Direccion": Direc.value,
+				"Localidad": Localidad.value,
+				"Telefono": Telefono.value,
+				"Contraseña": Contraseña.value
 			}
-			function Modificar() {
-				const id = document.getElementById("id")
-				const Nombre = document.getElementById("name")
-				const Apellido = document.getElementById("lastname")
-				const Correo = document.getElementById("email")
-				const Localidad = document.getElementById("localidad")
-				const Direc = document.getElementById("direc")
-				const Contraseña = document.getElementById("password")
-				const Telefono = document.getElementById("tel")
+			put(parseInt(id.value), obj)
+		}
+		function get(id) {
+			$.ajax({
+				type: "GET",
+				dataType: "json",
+				url: "http://localhost:62020/api/Usuarios/" + id,
+				success: function (data) {
+					console.log(data)
+					
+					const Nombre = document.getElementById("name")
+					const Apellido = document.getElementById("lastname")
+					const Correo = document.getElementById("email")
+					const Localidad = document.getElementById("localidad")
+					const Direc = document.getElementById("direc")
+					const Contraseña = document.getElementById("password")
+					const Telefono = document.getElementById("tel")
+					
+					Nombre.value = data.Nombre
+					Apellido.value = data.Apellido
+					Correo.value = data.Correo
+					Localidad.value = data.Localidad
+					Direc.value = data.Direccion
+					Contraseña.value = data.Contraseña
+					Telefono.value = data.Telefono
 
-				obj = {
-					"Nombre": Nombre.value,
-					"Apellido": Apellido.value,
-					"Correo": Correo.value,
-					"Direccion": Direc.value,
-					"Localidad": Localidad.value,
-					"Telefono": Telefono.value,
-					"Contraseña": Contraseña.value
+					
 				}
-				put(parseInt(id.value), obj)
-			}
-			function get(id) {
-				$.ajax({
-					type: "GET",
-					dataType: "json",
-					url: "http://localhost:62020/api/Usuarios/" + id,
-					success: function (data) {
-						console.log(data)
-						
-						const Nombre = document.getElementById("name")
-						const Apellido = document.getElementById("lastname")
-						const Correo = document.getElementById("email")
-						const Localidad = document.getElementById("localidad")
-						const Direc = document.getElementById("direc")
-						const Contraseña = document.getElementById("password")
-						const Telefono = document.getElementById("tel")
-						
-						Nombre.value = data.Nombre
-						Apellido.value = data.Apellido
-						Correo.value = data.Correo
-						Localidad.value = data.Localidad
-						Direc.value = data.Direccion
-						Contraseña.value = data.Contraseña
-						Telefono.value = data.Telefono
+			})
+		}
+		function put(id, obj) {
+			$.ajax({
+				type: "PUT",
+				dataType: "json",
+				data: obj,
+				url: "http://localhost:62020/api/Usuarios/" + id,
+				success: function (data) {
+					alert("Proceso Exitos...!!!")
+				}
+			})
+		}
+	</script>
 
-						
-					}
-				})
-			}
-			function put(id, obj) {
-				$.ajax({
-					type: "PUT",
-					dataType: "json",
-					data: obj,
-					url: "http://localhost:62020/api/Usuarios/" + id,
-					success: function (data) {
-						alert("Proceso Exitos...!!!")
-					}
-				})
-			}
-		</script>
+</body>
 
-	</body>
-
-	</html>
+</html>
