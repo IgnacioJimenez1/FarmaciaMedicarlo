@@ -1552,31 +1552,7 @@
 
   <script src="src/Contacto.js"></script>
 
-  <script>
-    function Guardar() {
-                const Nombre = document.getElementById("nombre")
-                const Email = document.getElementById("email")
-                const Telefono = document.getElementById("telefono")
-                const Mensaje = document.getElementById("mensaje")
-                obj = {
-                    "nombre": Nombre.value,            
-                    "email": Email.value,
-                    "telefono": Telefono.value,
-                    "mensaje": Mensaje.value
-                }
-                post(obj)
-            }
-            function post(obj) {
-                $.ajax({
-                    type: "POST",
-                    dataType: "json",
-                    data: obj,
-                    url: "http://localhost:62020/api/Main/",
-                    success: function (data) {
-                        alert("Proceso Exitos...!!!")
-                    }
-                })
-            }
+
     </script>
 
 </body>

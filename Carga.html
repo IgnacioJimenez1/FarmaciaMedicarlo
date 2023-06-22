@@ -247,8 +247,25 @@
 				data: obj,
 				url: "http://localhost:62020/api/Productos",
 				success: function (data) {
-					alert("Proceso Exitos...!!!")
+				
+					console.log("Proceso Exitos...!!!")
+					const Nombre = document.getElementById("Nombre")
+                    const Descripcion = document.getElementById("Descripcion")
+                    const Precio = document.getElementById("Precio")
+                    const Stock = document.getElementById("Stock")
+                    const Imagen = document.getElementById("Imagen")
+
+                    Nombre.value = ""
+                    Descripcion.value = ""
+                    Precio.value = ""
+                    Stock.value = ""
+                    Imagen.value = ""
+                    Nombre.focus()
+
 				}
+
+				
+
 			})
 		}
 

@@ -25,12 +25,11 @@ namespace WebApplication1
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Contacto> Contacto { get; set; }
         public virtual DbSet<Laboratorios> Laboratorios { get; set; }
         public virtual DbSet<ObrasSociales> ObrasSociales { get; set; }
         public virtual DbSet<Productos> Productos { get; set; }
         public virtual DbSet<Rol> Rol { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Usuarios> Usuarios { get; set; }
-        public virtual DbSet<Contacto> Contacto { get; set; }
     }
 }
